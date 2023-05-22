@@ -1,0 +1,402 @@
+<!--  Large modal example -->
+<div class="modal fade bs-example-modal-lg" id="buyNumberModelBox" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" data-controls-modal="buyNumberModelBox"  data-backdrop="static" data-keyboard="false" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="myLargeModalLabel">Buy Number</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row mb-20">
+                    <div class="col-12">
+                        <div class="mb-3">
+                            <label class="form-label">Select Users</label>
+                            <input type="number" value="1" required min="1" max="10" id="usersNumber" class="form-control" placeholder="Max 10">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="mb-3">
+                            <label class="form-label">Select Country</label>
+                            <div class="spinner-border text-primary m-1 searchNumberSpinner" role="status" style="display: none;">
+                                <span class="sr-only">
+                                    Loading...
+                                </span>
+                            </div>
+                            <select id="selectedCountry" class="form-select cursorPointer">
+                                <option class="cursorPointer selectedOption" disabled selected>--Select Your Country--</option>
+                                <option class="cursorPointer" value="CA" data-smsFeature="true" data-voiceFeature="true" data-mmsFeature="true">Canada(+1)</option>
+                                <option class="cursorPointer" value="DK" data-smsFeature="false" data-voiceFeature="true" data-mmsFeature="false">Denmark(+45)</option>
+                                <option class="cursorPointer" value="AU" data-smsFeature="true" data-voiceFeature="true" data-mmsFeature="false">Austrailia(+61)</option>
+                                <option class="cursorPointer" value="NL" data-smsFeature="true" data-voiceFeature="true" data-mmsFeature="false">Netherland(+31)</option>
+                                <option class="cursorPointer" value="US" data-smsFeature="true" data-voiceFeature="true" data-mmsFeature="true">United States(+1)</option>
+                                <option class="cursorPointer" value="GB" data-smsFeature="false" data-voiceFeature="true" data-mmsFeature="false">United Kingdom(+44)</option>
+                            </select>
+                            <b><small class="searchNumberMessage"></small></b>
+                        </div>
+                    </div>
+                    <label class="form-label">Select Features</label>
+                    <div class="d-flex">
+                        <div class="col-4">
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="smsFeature">
+                                <label class="form-check-label" for="smsFeature">
+                                    SMS
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="voiceFeature">
+                                <label class="form-check-label" for="voiceFeature">
+                                    VOICE
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="mmsFeature">
+                                <label class="form-check-label" for="mmsFeature">
+                                    MMS
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="d-flex justify-content-center col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mb-10 buyNumberBtnRow">
+                        <button class="btn btn-danger customBtnWidth" id="clearNumberDataBtn">
+                            Clear Data <span> <i class=" fas fa-trash" style="font-size: 15px;"></i> </span>
+                        </button>
+                    </div>
+                    <div class="d-flex justify-content-center col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mb-10 buyNumberBtnRow">
+                        <button class="btn btn-success customBtnWidth" id="searchNumberBtn">
+                            Search Numbers <span> <i class=" fas fa-search" style="font-size: 15px;"></i> </span>
+                        </button>
+                    </div>
+                    <div class="d-flex justify-content-center col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mb-10 buyNumberBtnRow">
+                        <button class="btn btn-primary customBtnWidth" id="purchaseBtn">
+                            Purchase <span id="loaderSpan"> <i class="fas fa-check" style="font-size: 15px;"></i> </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.modal -->
+
+<!--  Large modal example -->
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="myLargeModalLabel">Large modal</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Cras mattis consectetur purus sit amet fermentum.
+                    Cras justo odio, dapibus ac facilisis in,
+                    egestas eget quam. Morbi leo risus, porta ac
+                    consectetur ac, vestibulum at eros.</p>
+                <p>Praesent commodo cursus magna, vel scelerisque
+                    nisl consectetur et. Vivamus sagittis lacus vel
+                    augue laoreet rutrum faucibus dolor auctor.</p>
+                <p class="mb-0">Aenean lacinia bibendum nulla sed consectetur.
+                    Praesent commodo cursus magna, vel scelerisque
+                    nisl consectetur et. Donec sed odio dui. Donec
+                    ullamcorper nulla non metus auctor
+                    fringilla.</p>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<!-- Number Configuration Modal -->
+<div class="modal fade bs-example-modal-lg" id="configureNumberModalBox" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="myLargeModalLabel">
+                    Number Configuration
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div id="basic-pills-wizard" class="twitter-bs-wizard">
+                        <ul class="twitter-bs-wizard-nav nav nav-pills nav-justified">
+                            <li class="nav-item">
+                                <a href="#stepOneNumberConfig" class="nav-link active" data-toggle="tab">
+                                    <div class="step-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Number Specifications">
+                                        <i class="bx bx-phone"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#stepTwoNumberConfig" class="nav-link" data-toggle="tab">
+                                    <div class="step-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Company Allocation">
+                                        <i class="bx bx-book-bookmark"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#stepthreeNumberConfig" class="nav-link" data-toggle="tab">
+                                    <div class="step-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Save Details">
+                                        <i class="bx bxs-bank"></i>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- wizard-nav -->
+                        <div class="tab-content twitter-bs-wizard-tab-content">
+                            <div class="tab-pane active" id="stepOneNumberConfig">
+                                <div class="text-center mb-4">
+                                    <h5>Grant Services Access</h5>
+                                    <p class="card-title-desc">Fill all information below</p>
+                                </div>
+                                <!-- <hr> -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h6>SMS Service</h6>
+                                        <div class="card-body border border-1 border-light">
+                                            <div class="row">
+                                                <div class="form-check mb-3 col-3">
+                                                    <input class="form-check-input" value="outgoingSMS" type="radio" name="sms" id="sms1" checked="">
+                                                    <label class="form-check-label" for="sms1">
+                                                        Outgoing
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-3 col-3">
+                                                    <input class="form-check-input" value="incomingSMS" type="radio" name="sms" id="sms2" checked="">
+                                                    <label class="form-check-label" for="sms2">
+                                                        Incoming
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-3 col-3">
+                                                    <input class="form-check-input" value="bothSMS" type="radio" name="sms" id="sms3" checked="">
+                                                    <label class="form-check-label" for="sms3">
+                                                        Both
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-3 col-3">
+                                                    <input class="form-check-input" value="noneSMS" type="radio" name="sms" id="sms4" checked="">
+                                                    <label class="form-check-label" for="sms4">
+                                                        None
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h6>MMS Service</h6>
+                                        <div class="card-body border border-1 border-light">
+                                            <div class="row">
+                                                <div class="form-check mb-3 col-3">
+                                                    <input class="form-check-input" value="outgoingMMS" type="radio" name="mms" id="mms1" checked="">
+                                                    <label class="form-check-label" for="mms1">
+                                                        Outgoing
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-3 col-3">
+                                                    <input class="form-check-input" value="incomingMMS" type="radio" name="mms" id="mms2" checked="">
+                                                    <label class="form-check-label" for="mms2">
+                                                        Incoming
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-3 col-3">
+                                                    <input class="form-check-input" value="bothMMS" type="radio" name="mms" id="mms3" checked="">
+                                                    <label class="form-check-label" for="mms3">
+                                                        Both
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-3 col-3">
+                                                    <input class="form-check-input" value="noneMMS" type="radio" name="mms" id="mms4" checked="">
+                                                    <label class="form-check-label" for="mms4">
+                                                        None
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h6>Call Service</h6>
+                                        <div class="card-body card-body border border-1 border-light">
+                                            <div class="row">
+                                                <div class="form-check mb-3 col-3">
+                                                    <input class="form-check-input" value="outgoingCall" type="radio" name="call" id="call1" checked="">
+                                                    <label class="form-check-label" for="call1">
+                                                        Outgoing
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-3 col-3">
+                                                    <input class="form-check-input" value="incomingCall" type="radio" name="call" id="call2" checked="">
+                                                    <label class="form-check-label" for="call2">
+                                                        Incoming
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-3 col-3">
+                                                    <input class="form-check-input" value="bothCall" type="radio" name="call" id="call3" checked="">
+                                                    <label class="form-check-label" for="call3">
+                                                        Both
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-3 col-3">
+                                                    <input class="form-check-input" value="noneCall" type="radio" name="call" id="call4" checked="">
+                                                    <label class="form-check-label" for="call4">
+                                                        None
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="pager wizard twitter-bs-wizard-pager-link">
+                                    <li class="next">
+                                        <a href="#stepTwoNumberConfig" class="btn btn-primary" id="stepOneNext">
+                                            Next <i class="bx bx-chevron-right ms-1"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- tab pane -->
+                            <div class="tab-pane" id="stepTwoNumberConfig">
+                                <div class="text-center mb-4">
+                                    <h5>Company Allocation</h5>
+                                    <p class="card-title-desc">Fill all information below</p>
+                                </div>
+                                <form>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="mb-3">
+                                                <label class="form-label">Select Company</label>
+                                                <select class="form-select">
+                                                        <option selected="TC">Testing Company</option>
+                                                        <option value="VA">Vital Aims</option>
+                                                        <option value="VATS">Vital Aims Tech Solutions</option>
+                                                        <option value="MSTS">MS Tech Solutions</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h6>Allocation Method</h6>
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="form-check mb-3 col-6">
+                                                        <input class="form-check-input" type="radio" name="allocation" id="allocation1" checked="">
+                                                        <label class="form-check-label" for="allocation1">
+                                                            Auto Configuration
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check mb-3 col-6">
+                                                        <input class="form-check-input" type="radio" name="allocation" id="allocation2" checked="">
+                                                        <label class="form-check-label" for="allocation2">
+                                                            Manual Configurtion
+                                                        </label>
+                                                    </div>
+                                                </div>
+    
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </form>
+                                <ul class="pager wizard twitter-bs-wizard-pager-link">
+                                    <li class="previous disabled">
+                                        <a href="#stepTwoNumberConfig" class="btn btn-primary" id="stepOnePrevious">
+                                            <i class="bx bx-chevron-left me-1"></i>
+                                            Previous
+                                        </a>
+                                    </li>
+                                    <li class="next">
+                                        <a href="#stepthreeNumberConfig"  class="btn btn-primary" id="stepTwoNext">
+                                            Next 
+                                            <i class="bx bx-chevron-right ms-1"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- tab pane -->
+                            <div class="tab-pane" id="stepthreeNumberConfig">
+                                <div class="text-center mb-4">
+                                    <h5>Bank Details</h5>
+                                    <p class="card-title-desc">Fill all information below</p>
+                                </div>
+                                <form>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="basicpill-namecard-input" class="form-label">
+                                                    Name on Card
+                                                </label>
+                                                <input type="text" class="form-control" id="basicpill-namecard-input">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Credit Card Type</label>
+                                                <select class="form-select">
+                                                        <option selected="">Select Card Type</option>
+                                                        <option value="AE">American Express</option>
+                                                        <option value="VI">Visa</option>
+                                                        <option value="MC">MasterCard</option>
+                                                        <option value="DI">Discover</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="basicpill-cardno-input" class="form-label">
+                                                    Credit Card Number
+                                                </label>
+                                                <input type="text" class="form-control" id="basicpill-cardno-input">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="basicpill-card-verification-input" class="form-label">Card Verification Number</label>
+                                                <input type="text" class="form-control" id="basicpill-card-verification-input">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="basicpill-expiration-input" class="form-label">Expiration Date</label>
+                                                <input type="text" class="form-control" id="basicpill-expiration-input">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <ul class="pager wizard twitter-bs-wizard-pager-link">
+                                    <li class="previous disabled">
+                                        <a href="#stepTwoNumberConfig" class="btn btn-primary">
+                                            <i class="bx bx-chevron-left me-1"></i> 
+                                            Previous
+                                        </a>
+                                    </li>
+                                    <li class="float-end">
+                                        <a class="btn btn-primary">
+                                            Save Changes
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- tab pane -->
+                        </div>
+                        <!-- end tab content -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

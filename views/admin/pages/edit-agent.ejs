@@ -1,0 +1,171 @@
+<%- include('../partials/head'); %>
+    <!-- <body data-layout="horizontal"> -->
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            <!-- ========== Header ========== -->
+            <%- include('../partials/header'); %>
+            <!-- ========== Header End ========== -->
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <%- include('../partials/sidebar'); %>
+            <!-- Left Sidebar End -->
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                    <div class="col">
+                                        <h4 class="mb-sm-0 font-size-18">
+                                            John Williams
+                                        </h4>
+                                    </div>
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Company</a></li>
+                                            <li class="breadcrumb-item">Testing Company</li>
+                                            <li class="breadcrumb-item active">Edit Agent</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <h4 class="font-size-18" style="margin-top: 12px!important;">
+                                                    +17865780409
+                                                </h4>
+                                            </div>
+                                            <div class="col-6">
+                                                <button class="btn btn-danger agentDisableBtn" type="button"  style="float: right;">
+                                                    Disabled Account
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-4">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="mb-3">
+                                                    <label for="example-text-input" class="form-label">Login ID</label>
+                                                    <input class="form-control" type="text" placeholder="7865780409"  id="example-text-input">
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="mb-3">
+                                                    <label for="example-text-input" class="form-label">Email</label>
+                                                    <input class="form-control" type="text" placeholder="test@gmail.com"  id="example-text-input">
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="mb-3">
+                                                    <label for="example-text-input" class="form-label">Name</label>
+                                                    <input class="form-control" type="text" placeholder="John wiCK"  id="example-text-input">
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="mb-3">
+                                                    <label for="example-text-input" class="form-label">Password</label>
+                                                    <input class="form-control" type="text" placeholder="jniwdg"  id="example-text-input">
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="mb-3">
+                                                    <label for="example-text-input" class="form-label">Role</label>
+                                                    <input class="form-control" type="text" placeholder="Agent"  id="example-text-input">
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="mb-3">
+                                                    <label for="example-text-input" class="form-label">SMS Limits <small>(Outgoing)</small></label>
+                                                    <select class="form-select">
+                                                        <option>Select</option>
+                                                        <option>Large select</option>
+                                                        <option>Small select</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="mb-3">
+                                                    <label for="example-text-input" class="form-label">Call Service <small>(Outgoing)</small></label>
+                                                    <select class="form-select">
+                                                        <option>Select</option>
+                                                        <option>Block</option>
+                                                        <option>Unblock</option>
+                                                    </select>
+                                                    <b><small class="text-danger">**Access Denied**</small></b>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="mb-3">
+                                                    <label for="example-text-input" class="form-label">SMS Service <small>(Outgoing)</small></label>
+                                                    <select class="form-select">
+                                                        <option>Select</option>
+                                                        <option>Block</option>
+                                                        <option>Unblock</option>
+                                                    </select>
+                                                    <b><small class="text-success">**Access Granted**</small></b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <button class="btn btn-primary customBtnWidth updateAgentBtn">
+                                                Update
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end cardaa -->
+                            </div> <!-- end col -->
+                        </div> 
+                        <!-- end row -->
+                    </div>
+                    <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+                <%- include('../partials/footer'); %>
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+        <%- include('../partials/right-sidebar'); %>
+        <!-- Right bar overlay-->
+        <div class="rightbar-overlay"></div>
+        <%- include('../partials/modal'); %>
+        <script>
+            
+            $(document).on("click", ".agentDisableBtn", function(){
+                console.log("I am disabled")
+                Swal.fire({
+                    title: "Success",
+                    text: "Account has been disabled!",
+                    icon: "success",
+                    confirmButtonColor: "#5156be"
+                })
+            })
+            
+            $(document).on("click", ".updateAgentBtn", function(){
+                console.log("I am Update Btn")
+                Swal.fire({
+                    title: "Success",
+                    text: "Credentials has been updated!",
+                    icon: "success",
+                    confirmButtonColor: "#5156be"
+                })
+            })
+        </script>
+<%- include('../partials/foot'); %>

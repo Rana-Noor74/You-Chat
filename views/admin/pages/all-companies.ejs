@@ -1,0 +1,110 @@
+<%- include('../partials/head'); %>
+    <!-- <body data-layout="horizontal"> -->
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            <!-- ========== Header ========== -->
+            <%- include('../partials/header'); %>
+            <!-- ========== Header End ========== -->
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <%- include('../partials/sidebar'); %>
+            <!-- Left Sidebar End -->
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                    <h4 class="mb-sm-0 font-size-18">All Companies</h4>
+
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
+                                            <li class="breadcrumb-item">Company</li>
+                                            <li class="breadcrumb-item active">All Companies</li>
+                                        </ol>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a href="/admin/create-company">
+                                            <button style="float: right;" type="button" class="btn btn-primary">
+                                                Create Company
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div class="card-body">
+                                        <table id="company-DataTable" class="table table-bordered dt-responsive nowrap w-100">
+                                            <thead>
+                                                <tr>
+                                                    <th class="dataTablesHeadText">Sr. #</th>
+                                                    <th class="dataTablesHeadText">Name</th>
+                                                    <th class="dataTablesHeadText">Email</th>
+                                                    <th class="dataTablesHeadText">Password</th>
+                                                    <th class="dataTablesHeadText">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="companyTableBody">
+                                                <!-- <tr>
+                                                    <td>1</td>
+                                                    <td>Testing Company</td>
+                                                    <td>testing@testing.com</td>
+                                                    <td>test@123</td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-lock text-info"></i>
+                                                        </span>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/update-company">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company-details">
+                                                                <i class="far fa-eye"></i>
+                                                            </a>
+                                                        </span>   
+                                                          
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-trash text-danger deleteCompanyBtn"></i>
+                                                        </span> 
+                                                    </td>
+                                                </tr> -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- end cardaa -->
+                            </div> <!-- end col -->
+                        </div> 
+                        <!-- end row -->
+                    </div>
+                    <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+                <%- include('../partials/footer'); %>
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+        <%- include('../partials/right-sidebar'); %>
+        <!-- Right bar overlay-->
+        <div class="rightbar-overlay"></div>
+        <%- include('../partials/modal'); %>
+        <script src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/admin/assets/customjs/admin/all-companies.js"></script>
+<%- include('../partials/foot'); %>

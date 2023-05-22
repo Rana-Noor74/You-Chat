@@ -1,0 +1,1203 @@
+<%- include('../partials/head'); %>
+    <!-- <body data-layout="horizontal"> -->
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            <!-- ========== Header ========== -->
+            <%- include('../partials/header'); %>
+            <!-- ========== Header End ========== -->
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <%- include('../partials/sidebar'); %>
+            <!-- Left Sidebar End -->
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                    <h4 class="mb-sm-0 font-size-18">Requests</h4>
+
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
+                                            <li class="breadcrumb-item">Company</li>
+                                            <li class="breadcrumb-item active">Requests</li>
+                                        </ol>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
+                                            <thead>
+                                                <tr>
+                                                    <th class="dataTablesHeadText">Sr. #</th>
+                                                    <th class="dataTablesHeadText">Company Name</th>
+                                                    <th class="dataTablesHeadText">Number</th>
+                                                    <th class="dataTablesHeadText">Requested Service</th>
+                                                    <th class="dataTablesHeadText">Copmpany Reason</th>
+                                                    <th class="dataTablesHeadText">Request Date</th>
+                                                    <th class="dataTablesHeadText">Approved Date</th>
+                                                    <th class="dataTablesHeadText">Admin Reason</th>
+                                                    <th class="dataTablesHeadText">Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-success text-white">
+                                                            accepted
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-check confirmRequest text-primary"></i>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-times rejectRequest text-danger"></i>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            rejected
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-success text-white">
+                                                            accepted
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-check confirmRequest text-primary"></i>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-times rejectRequest text-danger"></i>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            rejected
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-success text-white">
+                                                            accepted
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-check confirmRequest text-primary"></i>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-times rejectRequest text-danger"></i>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            rejected
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-success text-white">
+                                                            accepted
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-check confirmRequest text-primary"></i>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-times rejectRequest text-danger"></i>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            rejected
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-success text-white">
+                                                            accepted
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-check confirmRequest text-primary"></i>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-times rejectRequest text-danger"></i>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            rejected
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-success text-white">
+                                                            accepted
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-check confirmRequest text-primary"></i>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-times rejectRequest text-danger"></i>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            rejected
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-success text-white">
+                                                            accepted
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-check confirmRequest text-primary"></i>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-times rejectRequest text-danger"></i>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            rejected
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-success text-white">
+                                                            accepted
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-check confirmRequest text-primary"></i>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-times rejectRequest text-danger"></i>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            rejected
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-success text-white">
+                                                            accepted
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-check confirmRequest text-primary"></i>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-times rejectRequest text-danger"></i>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            rejected
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-success text-white">
+                                                            accepted
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-check confirmRequest text-primary"></i>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-times rejectRequest text-danger"></i>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            rejected
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-success text-white">
+                                                            accepted
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-check confirmRequest text-primary"></i>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-times rejectRequest text-danger"></i>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            rejected
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-success text-white">
+                                                            accepted
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-check confirmRequest text-primary"></i>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-times rejectRequest text-danger"></i>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            rejected
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-success text-white">
+                                                            accepted
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-check confirmRequest text-primary"></i>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-times rejectRequest text-danger"></i>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            rejected
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-success text-white">
+                                                            accepted
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-check confirmRequest text-primary"></i>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-times rejectRequest text-danger"></i>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            rejected
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-success text-white">
+                                                            accepted
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-check confirmRequest text-primary"></i>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-times rejectRequest text-danger"></i>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            rejected
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-success text-white">
+                                                            accepted
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-check confirmRequest text-primary"></i>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-times rejectRequest text-danger"></i>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            rejected
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-success text-white">
+                                                            accepted
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-check confirmRequest text-primary"></i>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-times rejectRequest text-danger"></i>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            rejected
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-success text-white">
+                                                            accepted
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-check confirmRequest text-primary"></i>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-times rejectRequest text-danger"></i>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            rejected
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-success text-white">
+                                                            accepted
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-check confirmRequest text-primary"></i>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-times rejectRequest text-danger"></i>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            rejected
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-success text-white">
+                                                            accepted
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-check confirmRequest text-primary"></i>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-times rejectRequest text-danger"></i>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            rejected
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-success text-white">
+                                                            accepted
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-check confirmRequest text-primary"></i>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-times rejectRequest text-danger"></i>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            rejected
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-success text-white">
+                                                            accepted
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-check confirmRequest text-primary"></i>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-times rejectRequest text-danger"></i>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            rejected
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-success text-white">
+                                                            accepted
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-check confirmRequest text-primary"></i>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <i class="fas fa-times rejectRequest text-danger"></i>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Testing</td>
+                                                    <td>+17865780409</td>
+                                                    <td>{SMS: Block, Call: Unblock}</td>
+                                                    <td>Testing Purpose</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>11/04/2023 05:12:37 AM</td>
+                                                    <td>On company Requets</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            rejected
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- end cardaa -->
+                            </div> <!-- end col -->
+                        </div> 
+                        <!-- end row -->
+                    </div>
+                    <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+                <%- include('../partials/footer'); %>
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+        <%- include('../partials/right-sidebar'); %>
+        <!-- Right bar overlay-->
+        <div class="rightbar-overlay"></div>
+        <%- include('../partials/modal'); %>
+        <script>
+            $(document).on("click", ".confirmRequest", function(){
+                console.log("I am confirm Request")
+                Swal.fire({
+                    title: "Request Approved!",
+                    icon: "success",
+                    confirmButtonColor: "#5156be"
+                })
+            })
+            $(document).on("click", ".rejectRequest", function(){
+                console.log("I am confirm Request")
+                Swal.fire({
+                    title: "Request Rejected!",
+                    icon: "error",
+                    confirmButtonColor: "red"
+                })
+            })
+        </script>
+<%- include('../partials/foot'); %>

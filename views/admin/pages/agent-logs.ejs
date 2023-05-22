@@ -1,0 +1,106 @@
+<%- include('../partials/head'); %>
+    <!-- <body data-layout="horizontal"> -->
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            <!-- ========== Header ========== -->
+            <%- include('../partials/header'); %>
+            <!-- ========== Header End ========== -->
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <%- include('../partials/sidebar'); %>
+            <!-- Left Sidebar End -->
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                    <div class="col">
+                                        <h4 class="mb-sm-0 font-size-18">
+                                            Testing Account
+                                        </h4>
+                                        <span class="mb-sm-0 font-size-15">
+                                            +17865780409
+                                        </span>
+                                    </div>
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Company</a></li>
+                                            <li class="breadcrumb-item">Testing Company</li>
+                                            <li class="breadcrumb-item">Testing Account</li>
+                                            <li class="breadcrumb-item active">Agent Logs</li>
+                                        </ol>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
+                                            <thead>
+                                                <tr>
+                                                    <th class="dataTablesHeadText">#</th>
+                                                    <th class="dataTablesHeadText">Date</th>
+                                                    <th class="dataTablesHeadText">IP Address</th>
+                                                    <th class="dataTablesHeadText">Location</th>
+                                                    <th class="dataTablesHeadText">Activity</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>4/1/2023, 8:53:50 AM</td>
+                                                    <td>103.57.169.70</td>
+                                                    <td>{lng:74.2845339, lat:31.4182213}</td>
+                                                    <td>
+                                                        <span class="badge bg-primary text-white">
+                                                            Logged In
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>4/1/2023, 8:53:50 AM</td>
+                                                    <td>103.57.169.70</td>
+                                                    <td>{lng:74.2845339, lat:31.4182213}</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            Logged Out
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- end cardaa -->
+                            </div> <!-- end col -->
+                        </div> 
+                        <!-- end row -->
+                    </div>
+                    <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+                <%- include('../partials/footer'); %>
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+        <%- include('../partials/right-sidebar'); %>
+        <!-- Right bar overlay-->
+        <div class="rightbar-overlay"></div>
+        <%- include('../partials/modal'); %>
+<%- include('../partials/foot'); %>

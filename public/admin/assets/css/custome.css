@@ -1,0 +1,158 @@
+.customeTextSize{
+    font-size: 13px!important;
+}
+.leftSidebarIconSize{
+    font-size: 15px!important;
+    min-width: 25px!important;
+}
+.leftSidebarSubMenuIconSize{
+    font-size: 12px!important;
+    min-width: 10px!important;
+}
+#sidebar-menu ul li a {
+    padding: 10px 20px!important;
+    font-size: 15px!important;
+    font-weight: 500!important;
+}
+.submenuPadding{
+    padding-left: 15px!important
+}
+.submenuSpanText{
+    font-size: 14px!important;
+}
+.dataTablesHeadText{
+    font-size: 15px!important;
+    /* text-align: center!important; */
+}
+.dataTablesActionIconsText{
+    font-size: 14px!important;
+    cursor: pointer;
+    margin: 0px 2px;
+}
+.smslogsBtns{
+    margin-bottom: 8px!important;
+    font-weight: bold!important;
+}
+.widthFull{
+    width: 100%!important;
+}
+.customBtnWidth{
+    width: 200px!important;
+}
+.themeColorBg{
+    background-color: #5156BE!important;
+}
+.themeColor{
+    color: #5156BE!important;
+}
+
+.card{
+    border-color: rgb(215, 212, 212)!important;
+}
+.card-header{
+    border-color: rgb(215, 212, 212)!important;
+}
+table{
+    border-color: rgb(222, 220, 220)!important;
+}
+.footer{
+    border-color: rgb(215, 212, 212)!important;
+}
+.cursorPointer{
+    cursor: pointer!important;
+}
+#datatable-buttons_filter{
+    margin-top: 50px;
+}
+.buyNumberLoader{
+    height: 1rem!important;
+    width: 1rem!important;
+}
+.paginate_button{
+    display: none!important;
+}
+#datatable-buttons_previous{
+    display: block!important;
+}
+
+#datatable-buttons_next{
+    display: block!important;
+}
+
+.searchNumberSpinner{
+    height: 20px!important; 
+    width: 20px!important; 
+    margin: 0px!important;
+}
+
+.mb-10{
+    margin-bottom: 10px!important;
+}
+.mb-20{
+    margin-bottom: 20px!important;
+}
+.mb-30{
+    margin-bottom: 30px!important;
+}
+.mb-40{
+    margin-bottom: 40px!important;
+}
+.mb-50{
+    margin-bottom: 50px!important;
+}
+.mb-60{
+    margin-bottom: 60px!important;
+}
+
+.mt-10{
+    margin-top: 10px!important;
+}
+.mt-20{
+    margin-top: 20px!important;
+}
+.mt-30{
+    margin-top: 30px!important;
+}
+.mt-40{
+    margin-top: 40px!important;
+}
+.mt-50{
+    margin-top: 50px!important;
+}
+.mt-60{
+    margin-top: 60px!important;
+}
+
+.float-right{
+    float: right!important;
+}
+.float-left{
+    float: left!important;
+}
+
+@media only screen and (max-width: 767px) and (min-width: 320px)  {
+    #purchaseBtn{
+        float: left!important;
+    }
+    .buyNumberBtnRow{
+        display: flex!important;
+        justify-content: center!important;
+        align-items: center!important;
+    }
+}
+.showErrorStyle{
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+}
+.error{
+    font-size: 12px;
+    color: red;
+}
+
+.show-hide{
+    border: 1px solid lightgrey; 
+    border-radius:2px; 
+    cursor: pointer;
+}

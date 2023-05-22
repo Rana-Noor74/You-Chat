@@ -1,0 +1,146 @@
+<%- include('../partials/head'); %>
+    <!-- <body data-layout="horizontal"> -->
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            <!-- ========== Header ========== -->
+            <%- include('../partials/header'); %>
+            <!-- ========== Header End ========== -->
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <%- include('../partials/sidebar'); %>
+            <!-- Left Sidebar End -->
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                    <div class="col">
+                                        <h4 class="mb-sm-0 font-size-18">
+                                            Update Company
+                                        </h4>
+                                    </div>
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Company</a></li>
+                                            <li class="breadcrumb-item active">Update Company</li>
+                                        </ol>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <h4 class="font-size-18 text-primary" style="margin-top: 12px!important;">
+                                                    <i class="fa fa-user"></i> 
+                                                    Company Info
+                                                </h4>
+                                            </div>
+                                            <div class="col-6">
+                                                <button class="btn btn-danger agentDisableBtn" type="button"  style="float: right;">
+                                                    Disabled Company
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-4">
+                                        <div class="row mb-20">
+                                            <span class="showErrorStyle" id="updateCompanyError">
+                                               
+                                            </span> 
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="mb-3">
+                                                    <label for="updateCompanyName" class="form-label">Company Name*</label>
+                                                    <input class="form-control" type="text" placeholder="Company Name"  id="updateCompanyName" disabled>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="mb-3">
+                                                    <label for="updateCompanyEmail" class="form-label">Company Email*</label>
+                                                    <input class="form-control" type="text" placeholder="Company Email"  id="updateCompanyEmail" disabled>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="mb-3">
+                                                    <label for="updateCompanyPassword" class="form-label">Company Password*</label>
+                                                    <input class="form-control" type="text" placeholder="Company Password"  id="updateCompanyPassword" disabled>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="mb-3">
+                                                    <label for="updateCompanySMSLimit" class="form-label">Reset SMS Limit <small>(Outgoing)</small></label>
+                                                    <select class="form-select" id="updateCompanySMSLimit" disabled>
+                                                        <option value="500" selected>500</option>
+                                                        <option value="700">700</option>
+                                                        <option value="1000">1000</option>
+                                                    </select>
+                                                    <b><small class="text-success">**Current SMS Limit is Not Set Yet**</small> </b>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="mb-3">
+                                                    <label for="updateCompanyCallService" class="form-label">Call Service <small>(Outgoing)</small></label>
+                                                    <select class="form-select" id="updateCompanyCallService" disabled>
+                                                        <option value="block" selected>Block</option>
+                                                        <option value="unblock">Unblock</option>
+                                                    </select>
+                                                    <b><small class="text-danger">**Access Denied**</small></b>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="mb-3">
+                                                    <label for="updateCompanySMSService" class="form-label">SMS Service <small>(Outgoing)</small></label>
+                                                    <select class="form-select" id="updateCompanySMSService" disabled>
+                                                        <option value="block">Block</option>
+                                                        <option value="unblock" selected>Unblock</option>
+                                                    </select>
+                                                    <b><small class="text-success">**Access Granted**</small></b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <button class="btn btn-info customBtnWidth" id="editCompany-btn">
+                                                Edit Company <i class="bx bx-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-primary customBtnWidth d-none" id="updateCompany-btn">
+                                                Update Company <i class="bx bxs-up-arrow-circle"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end cardaa -->
+                            </div> <!-- end col -->
+                        </div> 
+                        <!-- end row -->
+                    </div>
+                    <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+                <%- include('../partials/footer'); %>
+            </div>
+            <!-- end main content-->
+        </div>
+        <!-- END layout-wrapper -->
+        <%- include('../partials/right-sidebar'); %>
+        <!-- Right bar overlay-->
+        <div class="rightbar-overlay"></div>
+        <%- include('../partials/modal'); %>
+        <script src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/admin/assets/customjs/admin/update-company.js"></script>
+<%- include('../partials/foot'); %>

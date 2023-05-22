@@ -1,0 +1,923 @@
+<%- include('../partials/head'); %>
+    <!-- <body data-layout="horizontal"> -->
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            <!-- ========== Header ========== -->
+            <%- include('../partials/header'); %>
+            <!-- ========== Header End ========== -->
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <%- include('../partials/sidebar'); %>
+            <!-- Left Sidebar End -->
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                    <h4 class="mb-sm-0 font-size-18">Testing Company</h4>
+
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Company</a></li>
+                                            <li class="breadcrumb-item">Company Details</li>
+                                            <li class="breadcrumb-item active">Testing Company</li>
+                                        </ol>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
+                                            <thead>
+                                                <tr>
+                                                    <th class="dataTablesHeadText">#</th>
+                                                    <th class="dataTablesHeadText">Number</th>
+                                                    <th class="dataTablesHeadText">Country</th>
+                                                    <th class="dataTablesHeadText">Name</th>
+                                                    <th class="dataTablesHeadText">Email</th>
+                                                    <th class="dataTablesHeadText">Login ID</th>
+                                                    <th class="dataTablesHeadText">Country Access</th>
+                                                    <th class="dataTablesHeadText">Password</th>
+                                                    <th class="dataTablesHeadText">Role</th>
+                                                    <th class="dataTablesHeadText">Status</th>
+                                                    <th class="dataTablesHeadText">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-primary text-white">
+                                                            active
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            inactive
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-primary text-white">
+                                                            active
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            inactive
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-primary text-white">
+                                                            active
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            inactive
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-primary text-white">
+                                                            active
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            inactive
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-primary text-white">
+                                                            active
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            inactive
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-primary text-white">
+                                                            active
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            inactive
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-primary text-white">
+                                                            active
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            inactive
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-primary text-white">
+                                                            active
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            inactive
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-primary text-white">
+                                                            active
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            inactive
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-primary text-white">
+                                                            active
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            inactive
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-primary text-white">
+                                                            active
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            inactive
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-primary text-white">
+                                                            active
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            inactive
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-primary text-white">
+                                                            active
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            inactive
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-primary text-white">
+                                                            active
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            inactive
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-primary text-white">
+                                                            active
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+17865780409</td>
+                                                    <td>US</td>
+                                                    <td>John Mark</td>
+                                                    <td>jm@testing.com</td>
+                                                    <td>7865780409</td>
+                                                    <td>US,GB</td>
+                                                    <td>test@1</td>
+                                                    <td>Agent</td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-white">
+                                                            inactive
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/edit-agent">
+                                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                            </a>
+                                                        </span>  
+                                                        <span class="dataTablesActionIconsText">
+                                                            <a href="/admin/company/agent-logs">
+                                                                <i class="fas fa-lock text-primary"></i>
+                                                            </a>
+                                                        </span> 
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- end cardaa -->
+                            </div> <!-- end col -->
+                        </div> 
+                        <!-- end row -->
+                    </div>
+                    <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+                <%- include('../partials/footer'); %>
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+        <%- include('../partials/right-sidebar'); %>
+        <!-- Right bar overlay-->
+        <div class="rightbar-overlay"></div>
+        <%- include('../partials/modal'); %>
+<%- include('../partials/foot'); %>
