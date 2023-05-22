@@ -28,7 +28,7 @@ app.use("/user-ajax", userAjax);
 app.use("/admin-ajax", adminAjax);
 app.use("/company-ajax", companyAjax);
 
-
+//server starting
 const start = async ()=>{
   try{
     //connecting db
