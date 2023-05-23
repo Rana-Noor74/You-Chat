@@ -23,9 +23,36 @@ module.exports = {
             res.send({"success" : 0, "message" : error.message});
         };
     },
-    updateCompanyQuery : async (req, res)=>{
-        console.log(req.body);
-        await res.status(200).send({"success" : 1 ,"message": "Company Updated Successfully!"});
+    getCompanyInfo : async (req, res)=>{
+        let companyDocId = req.params.companyDocId;
+        const companyDocData = await company.findById(companyDocId).exec();
+        await res.status(200).render("admin/pages/update-company", {data : companyDocData});
+    },
+    updateCompany : async (req, res)=>{
+        let companyName = req.body.newCompanyName;
+        let companyEmail = req.body.newCompanyEmail;
+        let companyPassword = req.body.newCompanyPassword;
+        let companySMSLimit = req.body.newCompanySMSLimit;
+        let companyCallService = req.body.newCompanyCallService;
+        let companySMSService = req.body.newCompanySMSService;
+        let companyDocId = req.body.companyDocId;
+        console.log(companyDocId);
+        company.findByIdAndUpdate(companyDocId, {
+            name : companyName,
+            email : companyEmail,
+            password : companyPassword,
+            smsLimit : companySMSLimit,
+            callService : companyCallService,
+            smsService : companySMSService,
+            updated_At : new Date(),
+        }).then(async (doc)=>{
+            console.log(doc);
+            if (doc.acknowleged) {
+                await res.status(200).send({"success" : 1, "message" : "Company is up-to-date"});
+            } else{
+                await res.status(200).send({"success" : 0, "message" : "Fail to update the company"});
+            };
+        });
     },
     searchNumberApi : async (req, res)=>{
         const url = req.body.url;

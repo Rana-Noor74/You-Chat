@@ -4,6 +4,6 @@ module.exports = {
     searchNumber : adminDB.searchNumberApi,
     buyNumber : adminDB.buyNumberApi,
     createCompany : adminDB.createCompanyQuery,
-    updateCompany : adminDB.updateCompanyQuery,
+    updateCompany : adminDB.updateCompany,
     getAllCompanies : adminDB.getAllCompanies,
 }

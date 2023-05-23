@@ -6,7 +6,7 @@ adminRoutes.route("/").get(adminController.index);
 adminRoutes.route("/login").get(adminController.getLogin);
 adminRoutes.route("/all-companies").get(adminController.getCompanies);
 adminRoutes.route("/create-company").get(adminController.createCompany);
-adminRoutes.route("/update-company").get(adminController.updateCompany);
+adminRoutes.route("/update-company/:companyDocId").get(adminController.updateCompanyInfo);
 adminRoutes.route("/companies-requests").get(adminController.companyRequest);
 adminRoutes.route("/numbers").get(adminController.numbers);
 adminRoutes.route("/sms-logs").get(adminController.smsLogs);

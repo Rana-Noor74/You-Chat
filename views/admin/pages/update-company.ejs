@@ -45,9 +45,9 @@
                                     <div class="card-header">
                                         <div class="row">
                                             <div class="col-6">
-                                                <h4 class="font-size-18 text-primary" style="margin-top: 12px!important;">
-                                                    <i class="fa fa-user"></i> 
-                                                    Company Info
+                                                <h4 id="dataTag" class="font-size-18 text-primary" style="margin-top: 12px!important;">
+                                                    <i class="fa fa-user"></i>
+                                                    <%= data.name %>
                                                 </h4>
                                             </div>
                                             <div class="col-6">
@@ -68,50 +68,68 @@
                                             <div class="col-6">
                                                 <div class="mb-3">
                                                     <label for="updateCompanyName" class="form-label">Company Name*</label>
-                                                    <input class="form-control" type="text" placeholder="Company Name"  id="updateCompanyName" disabled>
+                                                    <input class="form-control" value="<%= data.name %>" type="text" placeholder="Company Name"  id="updateCompanyName" disabled>
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <div class="mb-3">
                                                     <label for="updateCompanyEmail" class="form-label">Company Email*</label>
-                                                    <input class="form-control" type="text" placeholder="Company Email"  id="updateCompanyEmail" disabled>
+                                                    <input class="form-control" value="<%= data.email %>" type="text" placeholder="Company Email"  id="updateCompanyEmail" disabled>
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <div class="mb-3">
                                                     <label for="updateCompanyPassword" class="form-label">Company Password*</label>
-                                                    <input class="form-control" type="text" placeholder="Company Password"  id="updateCompanyPassword" disabled>
+                                                    <input class="form-control" value="<%= data.password %>" type="text" placeholder="Company Password"  id="updateCompanyPassword" disabled>
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <div class="mb-3">
                                                     <label for="updateCompanySMSLimit" class="form-label">Reset SMS Limit <small>(Outgoing)</small></label>
                                                     <select class="form-select" id="updateCompanySMSLimit" disabled>
-                                                        <option value="500" selected>500</option>
+                                                        <option value="<%= data.smsLimit%>" selected><%= data.smsLimit %></option>
                                                         <option value="700">700</option>
                                                         <option value="1000">1000</option>
                                                     </select>
-                                                    <b><small class="text-success">**Current SMS Limit is Not Set Yet**</small> </b>
+                                                    <b><small class="text-success">**Current SMS Limit is <%= data.smsLimit %>**</small> </b>
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <div class="mb-3">
                                                     <label for="updateCompanyCallService" class="form-label">Call Service <small>(Outgoing)</small></label>
                                                     <select class="form-select" id="updateCompanyCallService" disabled>
-                                                        <option value="block" selected>Block</option>
-                                                        <option value="unblock">Unblock</option>
+                                                        <% if ( data.callService == true) { %>
+                                                            <option value="block">Block</option>
+                                                            <option value="unblock" selected>Unblock</option>
+                                                        <%} else { %>
+                                                            <option value="block" selected>Block</option>
+                                                            <option value="unblock">Unblock</option>
+                                                        <% } %>
                                                     </select>
-                                                    <b><small class="text-danger">**Access Denied**</small></b>
+                                                    <b>
+                                                        <small class="<%= data.callService == true ? 'text-success' : 'text-danger' %>">
+                                                            <%= data.callService == true ? '**Access Granted**' : '**Access Denied**' %> 
+                                                        </small>
+                                                    </b>
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <div class="mb-3">
                                                     <label for="updateCompanySMSService" class="form-label">SMS Service <small>(Outgoing)</small></label>
                                                     <select class="form-select" id="updateCompanySMSService" disabled>
-                                                        <option value="block">Block</option>
-                                                        <option value="unblock" selected>Unblock</option>
+                                                        <% if ( data.smsService == true) { %>
+                                                            <option value="block">Block</option>
+                                                            <option value="unblock" selected>Unblock</option>
+                                                        <%} else { %>
+                                                            <option value="block" selected>Block</option>
+                                                            <option value="unblock">Unblock</option>
+                                                        <% } %>
                                                     </select>
-                                                    <b><small class="text-success">**Access Granted**</small></b>
+                                                    <b>
+                                                        <small class="<%= data.smsService == true ? 'text-success' : 'text-danger' %>">
+                                                            <%= data.smsService == true ? '**Access Granted**' : '**Access Denied**' %> 
+                                                        </small>
+                                                    </b>
                                                 </div>
                                             </div>
                                         </div>
@@ -119,7 +137,7 @@
                                             <button class="btn btn-info customBtnWidth" id="editCompany-btn">
                                                 Edit Company <i class="bx bx-pencil"></i>
                                             </button>
-                                            <button class="btn btn-primary customBtnWidth d-none" id="updateCompany-btn">
+                                            <button class="btn btn-primary customBtnWidth d-none" id="updateCompany-btn" data-companyDocId="<%= data._id %>">
                                                 Update Company <i class="bx bxs-up-arrow-circle"></i>
                                             </button>
                                         </div>

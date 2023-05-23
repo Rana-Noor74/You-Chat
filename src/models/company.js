@@ -36,6 +36,9 @@ const companySchema = new mongoose.Schema({
         type : Date,
         default : Date.now(),
     },
+    updated_At : {
+        type : Date
+    },
 });
 
 const companyModel = mongoose.model("Companie", companySchema);

@@ -1,3 +1,5 @@
+const adminDB = require("../../db/admin/adminQueries");
+
 module.exports = {
     index : (req, res)=>{
         res.status(200).render("admin/pages/index");
@@ -11,9 +13,7 @@ module.exports = {
     createCompany : (req, res)=>{
         res.status(200).render("admin/pages/create-company");
     },
-    updateCompany : (req, res)=>{
-        res.status(200).render("admin/pages/update-company");
-    },
+    updateCompanyInfo : adminDB.getCompanyInfo,
     companyRequest : (req, res)=>{
         res.status(200).render("admin/pages/company-requests");
     },
