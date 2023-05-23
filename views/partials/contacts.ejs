@@ -1,0 +1,330 @@
+<header class="aside-header">
+    <a class="chatapp-title link-dark">
+        <h1>Chat</h1>
+    </a>
+    <div class="d-flex">
+        <div class="dropdown">
+            <a href="#" class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover no-caret">
+                <span class="icon">
+                    <span class="feather-icon">
+                        <i data-feather="settings"></i>
+                    </span>
+                </span>
+            </a>
+        </div>
+        <a href="#" class="btn btn-icon btn-rounded btn-primary">
+            <span class="icon">
+                <span class="feather-icon">
+                    <i class="fa fa-envelope" style="font-size: 15px!important;"></i>
+                </span>
+            </span>
+        </a>
+    </div>
+</header>
+<div  data-simplebar class="aside-body">
+    <form class="aside-search" role="search">
+        <input type="text" class="form-control" placeholder="Search Chats">
+    </form>
+    <ul class="chat-contacts-list list-group list-group-flush">
+        <li class="list-group-item">
+            <div class="media">
+                <div class="media-head">
+                    <div class="avatar avatar-sm avatar-rounded position-relative">
+                        <!-- <img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/avatar2.jpg" alt="user" class="avatar-img"> -->
+                        <i class="fa fa-user-circle"></i>
+                    </div>
+                </div>
+                <div class="media-body">
+                    <div>
+                        <div class="user-name">Morgan Freeman</div>
+                        <div class="user-last-chat">Please send some insights of presentation</div>
+                    </div>	
+                    <div>
+                        <div class="last-chat-time">Yesterday</div>
+                        <div class="badge badge-primary badge-sm badge-pill">15</div>
+                        <div class="dropdown action-drp">
+                            <a href="#" class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover dropdown-toggle no-caret" data-bs-toggle="dropdown"><span class="icon"><span class="feather-icon"><i data-feather="more-horizontal"></i></span></span></a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a class="dropdown-item link-primary" href="#">
+                                    Save <i class="fa fa-user-plus" style="font-size:16px!important"></i>
+                                </a>
+                                <a class="dropdown-item link-danger" href="#">
+                                    Block <i class="fa fa-ban" style="font-size: 16px!important;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div  class="media read-chat active-user">
+                <div class="media-head">
+                    <div class="avatar avatar-sm avatar-rounded position-relative">
+                        <!-- <img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/avatar8.jpg" alt="user" class="avatar-img"> -->
+                        <i class="fa fa-user-circle"></i>
+                    </div>
+                </div>
+                <div class="media-body">
+                    <div>
+                        <div class="user-name">Huma Therman</div>
+                        <div class="user-last-chat">Typing<span class="one">.</span><span class="two">.</span><span class="three">.</span></div>
+                    </div>	
+                    <div>
+                        <div class="last-chat-time">10:25 PM</div>
+                        <div class="dropdown action-drp">
+                            <a href="#" class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover dropdown-toggle no-caret" data-bs-toggle="dropdown"><span class="icon"><span class="feather-icon"><i data-feather="more-horizontal"></i></span></span></a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a class="dropdown-item link-primary" href="#">
+                                    Save <i class="fa fa-user-plus" style="font-size:16px!important"></i>
+                                </a>
+                                <a class="dropdown-item link-danger" href="#">
+                                    Block <i class="fa fa-ban" style="font-size: 16px!important;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="media">
+                <div class="media-head">
+                    <div class="avatar avatar-sm avatar-rounded">
+                        <!-- <img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/avatar13.jpg" alt="user" class="avatar-img"> -->
+                        <i class="fa fa-user-circle"></i>
+                    </div>
+                </div>
+                <div class="media-body">
+                    <div>
+                        <div class="user-name">Charlie Chaplin</div>
+                        <div class="user-last-chat">Hello mike, thank you for inviting</div>
+                    </div>	
+                    <div>
+                        <div class="last-chat-time">5 min</div>
+                        <div class="badge badge-primary badge-sm badge-pill">2</div>
+                        <div class="dropdown action-drp">
+                            <a href="#" class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover dropdown-toggle no-caret" data-bs-toggle="dropdown"><span class="icon"><span class="feather-icon"><i data-feather="more-horizontal"></i></span></span></a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a class="dropdown-item link-primary" href="#">
+                                    Save <i class="fa fa-user-plus" style="font-size:16px!important"></i>
+                                </a>
+                                <a class="dropdown-item link-danger" href="#">
+                                    Block <i class="fa fa-ban" style="font-size: 16px!important;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="media  read-chat">
+                <div class="media-head">
+                    <div class="avatar avatar-sm avatar-soft-danger avatar-rounded">
+                        <span class="initial-wrap">W</span>
+                    </div>
+                </div>
+                <div class="media-body">
+                    <div>
+                        <div class="user-name">Winston Churchil</div>
+                        <div class="user-last-chat">Show me what reports you have left</div>
+                    </div>	
+                    <div>
+                        <div class="last-chat-time">3:15 PM</div>
+                        <div class="dropdown action-drp">
+                            <a href="#" class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover dropdown-toggle no-caret" data-bs-toggle="dropdown"><span class="icon"><span class="feather-icon"><i data-feather="more-horizontal"></i></span></span></a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a class="dropdown-item link-primary" href="#">
+                                    Save <i class="fa fa-user-plus" style="font-size:16px!important"></i>
+                                </a>
+                                <a class="dropdown-item link-danger" href="#">
+                                    Block <i class="fa fa-ban" style="font-size: 16px!important;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div  class="media read-chat">
+                <div class="media-head">
+                    <div class="avatar avatar-sm avatar-rounded position-relative">
+                        <!-- <img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/avatar15.jpg" alt="user" class="avatar-img"> -->
+                        <i class="fa fa-user-circle"></i>
+                    </div>
+                </div>
+                <div class="media-body">
+                    <div>
+                        <div class="user-name">Boss Baby</div>
+                        <div class="user-last-chat">Meeting in the morning</div>
+                    </div>	
+                    <div>
+                        <div class="last-chat-time">5:23 AM</div>
+                        <div class="dropdown action-drp">
+                            <a href="#" class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover dropdown-toggle no-caret" data-bs-toggle="dropdown"><span class="icon"><span class="feather-icon"><i data-feather="more-horizontal"></i></span></span></a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a class="dropdown-item link-primary" href="#">
+                                    Save <i class="fa fa-user-plus" style="font-size:16px!important"></i>
+                                </a>
+                                <a class="dropdown-item link-danger" href="#">
+                                    Block <i class="fa fa-ban" style="font-size: 16px!important;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div  class="media read-chat">
+                <div class="media-head">
+                    <div class="avatar avatar-sm avatar-primary avatar-rounded">
+                        <span class="initial-wrap">H</span>
+                    </div>
+                </div>
+                <div class="media-body">
+                    <div>
+                        <div class="user-name">Hencework</div>
+                        <div class="user-last-chat">give me the last copy of jampack</div>
+                    </div>	
+                    <div>
+                        <div class="last-chat-time">24 Jan</div>
+                        <div class="dropdown action-drp">
+                            <a href="#" class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover dropdown-toggle no-caret" data-bs-toggle="dropdown"><span class="icon"><span class="feather-icon"><i data-feather="more-horizontal"></i></span></span></a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a class="dropdown-item link-primary" href="#">
+                                    Save <i class="fa fa-user-plus" style="font-size:16px!important"></i>
+                                </a>
+                                <a class="dropdown-item link-danger" href="#">
+                                    Block <i class="fa fa-ban" style="font-size: 16px!important;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div  class="media">
+                <div class="media-head">
+                    <div class="avatar avatar-sm avatar-rounded position-relative">
+                        <!-- <img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/avatar3.jpg" alt="user" class="avatar-img"> -->
+                        <i class="fa fa-user-circle"></i>
+                    </div>
+                </div>
+                <div class="media-body">
+                    <div>
+                        <div class="user-name">Jaquiline Joker</div>
+                        <div class="user-last-chat">This is my test chat msg last one</div>
+                    </div>	
+                    <div>
+                        <div class="last-chat-time">4:05 AM</div>
+                        <div class="badge badge-primary badge-sm badge-pill">37</div>
+                        <div class="dropdown action-drp">
+                            <a href="#" class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover dropdown-toggle no-caret" data-bs-toggle="dropdown"><span class="icon"><span class="feather-icon"><i data-feather="more-horizontal"></i></span></span></a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a class="dropdown-item link-primary" href="#">
+                                    Save <i class="fa fa-user-plus" style="font-size:16px!important"></i>
+                                </a>
+                                <a class="dropdown-item link-danger" href="#">
+                                    Block <i class="fa fa-ban" style="font-size: 16px!important;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div  class="media read-chat">
+                <div class="media-head">
+                    <div class="avatar avatar-sm avatar-rounded position-relative">
+                        <!-- <img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/avatar7.jpg" alt="user" class="avatar-img"> -->
+                        <i class="fa fa-user-circle"></i>
+                    </div>
+                </div>
+                <div class="media-body">
+                    <div>
+                        <div class="user-name">Tom Cruz</div>
+                        <div class="user-last-chat text-danger"><span class="feather-icon fe-x me-1"><i data-feather="phone-call"></i></span>Missed call</div>
+                    </div>	
+                    <div>
+                        <div class="last-chat-time">7:40PM</div>
+                        <div class="dropdown action-drp">
+                            <a href="#" class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover dropdown-toggle no-caret" data-bs-toggle="dropdown"><span class="icon"><span class="feather-icon"><i data-feather="more-horizontal"></i></span></span></a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a class="dropdown-item link-primary" href="#">
+                                    Save <i class="fa fa-user-plus" style="font-size:16px!important"></i>
+                                </a>
+                                <a class="dropdown-item link-danger" href="#">
+                                    Block <i class="fa fa-ban" style="font-size: 16px!important;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div  class="media read-chat">
+                <div class="media-head">
+                    <div class="avatar avatar-sm avatar-rounded">
+                        <!-- <img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/avatar9.jpg" alt="user" class="avatar-img"> -->
+                        <i class="fa fa-user-circle"></i>
+                    </div>
+                </div>
+                <div class="media-body">
+                    <div>
+                        <div class="user-name">Katherine Jones</div>
+                        <div class="user-last-chat">Hi!!! I was wondering if you are free</div>
+                    </div>	
+                    <div>
+                        <div class="last-chat-time">Yesterday</div>
+                        <div class="dropdown action-drp">
+                            <a href="#" class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover dropdown-toggle no-caret" data-bs-toggle="dropdown"><span class="icon"><span class="feather-icon"><i data-feather="more-horizontal"></i></span></span></a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a class="dropdown-item link-primary" href="#">
+                                    Save <i class="fa fa-user-plus" style="font-size:16px!important"></i>
+                                </a>
+                                <a class="dropdown-item link-danger" href="#">
+                                    Block <i class="fa fa-ban" style="font-size: 16px!important;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div  class="media read-chat">
+                <div class="media-head">
+                    <div class="avatar avatar-sm avatar-soft-info avatar-rounded">
+                        <span class="initial-wrap">D</span>
+                    </div>
+                </div>
+                <div class="media-body">
+                    <div>
+                        <div class="user-name">Danial Craig</div>
+                        <div class="user-last-chat">Boss is looking for you in the office</div>
+                    </div>	
+                    <div>
+                        <div class="last-chat-time">3:15PM</div>
+                        <div class="dropdown action-drp">
+                            <a href="#" class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover dropdown-toggle no-caret" data-bs-toggle="dropdown"><span class="icon"><span class="feather-icon"><i data-feather="more-horizontal"></i></span></span></a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a class="dropdown-item link-primary" href="#">
+                                    Save <i class="fa fa-user-plus" style="font-size:16px!important"></i>
+                                </a>
+                                <a class="dropdown-item link-danger" href="#">
+                                    Block <i class="fa fa-ban" style="font-size: 16px!important;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

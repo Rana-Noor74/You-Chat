@@ -1,0 +1,21 @@
+body{
+    font-size: smaller!important;
+}
+.avatar-sm .fa-user-circle{
+    font-size: 60px!important;
+    color: grey!important;
+}
+.avatar-xs .fa-user-circle{
+    font-size: 40px!important;
+    color: grey!important;
+}
+.avatar-xxl .fa-user-circle{
+    font-size: 150px!important;
+    color: grey!important;
+}
+.avatar-xxxl .fa-user-circle{
+    font-size: 200px!important;
+    color: grey!important;
+    margin-left: 10px!important;
+
+}

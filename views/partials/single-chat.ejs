@@ -1,0 +1,328 @@
+<header class="chat-header">
+    <a id="back_user_list" class="btn btn-sm btn-icon btn-flush-dark btn-rounded flush-soft-hover back-user-list" href="#">
+        <span class="icon"><span class="feather-icon"><i data-feather="chevron-left"></i></span></span>
+    </a>
+    <div class="media">
+        <div class="media-head">
+            <div class="avatar avatar-sm avatar-rounded position-relative">
+                <!-- <img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/avatar8.jpg" alt="user" class="avatar-img"> -->
+                <i class="fa fa-user-circle"></i>
+            </div>
+        </div>
+        <div class="media-body">
+            <div class="user-name">Huma Therman</div>
+            <div class="user-status">Active 3min ago</div>
+        </div>
+    </div>
+    <div class="chat-options-wrap">	
+        <a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover dropdown-toggle no-caret d-none d-xl-block" href="#" data-bs-toggle="modal" data-bs-target="#invite_people">
+            <span class="icon" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Invite people">
+                <span class="feather-icon">
+                    <i data-feather="user-plus"></i>
+                </span>
+            </span>
+        </a>
+        <a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover d-none d-xl-block" href="#" data-bs-toggle="modal" data-bs-target="#audio_call">
+            <span class="icon" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Audio call">
+                <span class="feather-icon">
+                    <i data-feather="phone"></i>
+                </span>
+            </span>
+        </a>
+        <a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover chatapp-info-toggle active" href="#">
+            <span class="icon" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Info">
+                <span class="feather-icon">
+                    <i data-feather="info"></i>
+                </span>
+            </span>
+        </a>
+        <a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover hk-navbar-togglable d-none d-xl-block" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Collapse">
+            <span class="icon">
+                <span class="feather-icon"><i data-feather="chevron-up"></i></span>
+                <span class="feather-icon d-none"><i data-feather="chevron-down"></i></span>
+            </span>
+        </a>
+    </div>
+</header>
+<div data-simplebar id="chat_body" class="chat-body">
+    <ul id="dummy_avatar" class="list-unstyled chat-single-list">
+        <li class="media received">
+            <div class="avatar avatar-xs avatar-rounded">
+                <!-- <img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/avatar8.jpg" alt="user" class="avatar-img"> -->
+                <i class="fa fa-user-circle"></i>
+            </div>
+            <div class="media-body">
+                <div class="msg-box">
+                    <div>
+                        <p>Cool, lets talk about it tomorrow</p>
+                        <span class="chat-time">10:52 PM</span>
+                    </div>
+                    
+                </div>
+                <div class="msg-box">
+                    <div>
+                        <p>Images for new marketing pages have been sent</p>
+                        <span class="chat-time">10:53 PM</span>
+                    </div>
+                    
+                </div> 
+            </div>
+        </li>
+        <li class="media media-attachment received">
+            <div class="avatar avatar-xs avatar-rounded">
+                <!-- <img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/avatar8.jpg" alt="user" class="avatar-img"> -->
+                <i class="fa fa-user-circle"></i>
+            </div>
+            <div class="media-body msg-docs">
+                <div class="msg-box">
+                    <div>
+                        <div class="media">
+                            <div class="avatar avatar-icon avatar-sm avatar-blue">
+                                <span class="initial-wrap fs-3">
+                                    <i class="ri-file-excel-2-fill"></i>
+                                </span>
+                            </div>
+                            <div class="media-body">
+                                <p class="file-name">Website_content.xls</p>
+                                <p class="file-size">2,635 KB</p>
+                            </div>
+                        </div>
+                        <div class="file-overlay">
+                            <button class="btn btn-sm btn-icon btn-rounded btn-primary"><span class="icon"><span class="feather-icon"><i data-feather="arrow-down"></i></span></span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="msg-box">
+                    <div>
+                        <div class="media">
+                            <div class="avatar avatar-icon avatar-sm avatar-warning">
+                                <span class="initial-wrap fs-3">
+                                    <i class="ri-file-zip-fill"></i>
+                                </span>
+                            </div>
+                            <div class="media-body">
+                                <p class="file-name">themeforest-pack.zip</p>
+                                <p class="file-size">2.45 GB</p>
+                            </div>
+                        </div>
+                        <div class="file-overlay">
+                            <button class="btn btn-sm btn-icon btn-rounded btn-primary"><span class="icon"><span class="feather-icon"><i data-feather="arrow-down"></i></span></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="day-sep">
+            <span>Today</span>
+        </li>
+        <li class="media sent">
+            <div class="media-body">
+                <div class="msg-box">
+                    <div>
+                        <p>Anyways, I am working on something that you would like to know. This project is based on angular js and you are the keeda in it. I need you help in it.</p>
+                        <span class="chat-time">11:52 PM</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </li>
+        <li class="media media-attachment received">
+            <div class="avatar avatar-xs avatar-rounded">
+                <!-- <img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/avatar8.jpg" alt="user" class="avatar-img"> -->
+                <i class="fa fa-user-circle"></i>
+            </div>
+            <div class="media-body msg-imgs">
+                <div class="msg-box">
+                    <div>
+                        <img class="d-block img-fluid" src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/giphy.gif" alt="gif">
+                    </div>
+                    
+                </div>
+            </div>
+        </li>
+        <li class="media sent">
+            <div class="media-body">
+                <div class="msg-box">
+                    <div>
+                        <p>Haha, this joke is hilarious. Is it what your heart feel about the salary? 😍</p>
+                        <span class="chat-time">10:52 PM</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </li>
+        <li class="media received">
+            <div class="avatar avatar-xs avatar-rounded">
+                <!-- <img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/avatar8.jpg" alt="user" class="avatar-img"> -->
+                <i class="fa fa-user-circle"></i>
+            </div>
+            <div class="media-body">
+                <div class="msg-box">
+                    <div>
+                        <p>Hey Ben, just a reminder that you are coming for the meeting today in the conference. We are proposing a change in the client briefing.</p>
+                        <span class="chat-time">9:20 AM</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<footer class="chat-footer">
+    <button class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover flex-shrink-0"  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="icon"><span class="feather-icon"><i data-feather="share"></i></span></span>
+    </button>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">
+            <div class="d-flex align-items-center">
+                <div class="avatar avatar-icon avatar-xs avatar-soft-primary avatar-rounded me-3">
+                    <span class="initial-wrap">
+                        <i class="ri-image-line"></i>
+                    </span>
+                </div>
+                <div>
+                    <span class="h6 mb-0">
+                        Select file from Gallery
+                        <!-- <input type="file" value="Select file from Gallery"> -->
+                    </span>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="input-group">
+        <span class="input-affix-wrapper">
+            <input type="text" id="input_msg_send_chatapp" name="send-msg" class="input-msg-send form-control rounded-input" placeholder="Type your message...">
+            <span class="input-suffix">
+                <button class="btn btn-icon btn-flush-primary btn-rounded btn-send">
+                    <span class="icon">
+                        <span class="feather-icon">
+                            <i data-feather="arrow-right"></i>
+                        </span>
+                    </span>
+                </button>
+            </span>
+        </span>
+    </div>
+    <button class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover">
+        <span class="icon"><span class="feather-icon"><i data-feather="smile"></i></span></span>
+    </button>
+</footer>
+<div class="chat-info">
+    <div data-simplebar class="nicescroll-bar">
+        <button type="button" class="info-close btn-close">
+            <span aria-hidden="true">×</span>
+        </button>
+        <div class="text-center">
+            <div class="avatar avatar-xxl avatar-rounded">
+                <!-- <img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/avatar8.jpg" alt="user" class="avatar-img"> -->
+                <i class="fa fa-user-circle"></i>
+            </div>
+            <div class="cp-name text-truncate mt-2">Huma Therman</div>
+            <p class="text-truncate">No phone calls Always busy</p>
+        </div>
+        
+        <ul class="nav nav-justified nav-light nav-tabs nav-segmented-tabs active-theme mt-4">
+            <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="tab" href="#tab_info">
+                    <span class="nav-link-text">Info</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab_files">
+                    <span class="nav-link-text">Files</span>
+                </a>
+            </li>
+        </ul>
+        <div class="tab-content mt-4">
+            <div class="tab-pane fade show active" id="tab_info">
+                <div class="collapse-simple mt-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <a role="button" data-bs-toggle="collapse" href="#gn_info" aria-expanded="true">General Info</a>
+                        </div>
+                        <div id="gn_info" class="collapse show">
+                            <div class="card-body">
+                                <ul class="cp-info">
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <span class="cp-icon-wrap"><span class="feather-icon"><i data-feather="briefcase"></i></span></span>
+                                            Co-Founder
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <span class="cp-icon-wrap"><span class="feather-icon"><i data-feather="mail"></i></span></span>
+                                            <span class="text-primary">contact@hencework.com</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <span class="cp-icon-wrap"><span class="feather-icon"><i data-feather="phone"></i></span></span>
+                                            +91-25-4125-2365
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <span class="cp-icon-wrap"><span class="feather-icon"><i data-feather="map-pin"></i></span></span>
+                                            Oslo, Canada
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="tab_files">
+                <div class="collapse-simple mt-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <a role="button" data-bs-toggle="collapse" href="#files_collapse" aria-expanded="true">
+                                Shared Files
+                            </a>
+                        </div>
+                        <div id="files_collapse" class="collapse show">
+                            <div class="card-body">
+                                <ul class="cp-files d-flex flex-row" >
+                                    <li>
+                                        <div class="media">
+                                            <div class="media-head">
+                                                <div class="avatar avatar-icon avatar-sm avatar-soft-blue">
+                                                    <span class="initial-wrap fs-3">
+                                                        <i class="ri-file-excel-2-fill"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="media">
+                                            <div class="media-head">
+                                                <div class="avatar avatar-icon avatar-sm avatar-soft-light">
+                                                    <span class="initial-wrap fs-3">
+                                                        <i class="ri-file-text-fill"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="media">
+                                            <div class="media-head">
+                                                <div class="avatar avatar-icon avatar-sm avatar-soft-warning">
+                                                    <span class="initial-wrap fs-3" >
+                                                        <i class="ri-file-zip-fill"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
