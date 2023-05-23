@@ -13,6 +13,7 @@ $(document).on("click", "#editCompany-btn", function(){
 
 //form validations and creating company
 $(document).on("click", "#updateCompany-btn", function(){
+    var updateCompanyDocId = $(this).attr("data-companyDocId");
     var updateCompanyName = $("#updateCompanyName").val();
     var updateCompanyEmail = $("#updateCompanyEmail").val();
     var updateCompanyPassword = $("#updateCompanyPassword").val();
@@ -90,6 +91,7 @@ $(document).on("click", "#updateCompany-btn", function(){
                                             "newCompanySMSLimit" : updateCompanySMSLimit,
                                             "newCompanyCallService" : updateCompanyCallService,
                                             "newCompanySMSService" :  updateCompanySMSService,
+                                            "companyDocId" : updateCompanyDocId,
                                         }),
                                         "success" :  function(response){
                                             console.log(response);
