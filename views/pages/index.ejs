@@ -1,4 +1,31 @@
-<h1>This is user side</h1>
-<strong>To access admin panel click down</strong>
-<br>
-<a href="/admin/login">ADMIN</a>
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head"); %>
+<body>
+   	<!-- Wrapper -->
+	<div class="hk-wrapper" data-layout="navbar" data-layout-style="default" data-menu="light" data-footer="simple">
+        <%- include("../partials/header"); %>
+		<!-- Main Content -->
+		<div class="hk-pg-wrapper pb-0">
+			<!-- Page Body -->
+			<div class="hk-pg-body py-0">
+				<div class="chatapp-wrap chatapp-info-active">
+					<div class="chatapp-content">
+						<div class="chatapp-aside">
+                            <%- include("../partials/contacts"); %>
+						</div>
+						<div class="chatapp-single-chat">
+                            <%- include("../partials/single-chat"); %>
+						</div>
+						<%- include("../partials/modal"); %>
+					</div>
+				</div>	
+			</div>
+			<!-- /Page Body -->
+		</div>
+		<!-- /Main Content -->
+	</div>
+    <!-- /Wrapper -->
+    <%- include("../partials/foot"); %>
+</body>
+</html>

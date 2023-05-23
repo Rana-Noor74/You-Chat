@@ -1,0 +1,206 @@
+		<!-- Top Navbar -->
+		<nav class="hk-navbar navbar navbar-expand-xl navbar-light fixed-top">
+			<div class="container-fluid">
+				<!-- Start Nav -->
+				<div class="nav-start-wrap flex-fill">
+					<!-- Brand -->
+					<a class="navbar-brand d-xl-flex d-none flex-shrink-0" href="/">
+						<img class="brand-img img-fluid" src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/brand-sm.svg" alt="brand" />
+						<img class="brand-img img-fluid" src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/Jampack.svg" alt="brand" />
+					</a>
+					<!-- /Brand -->
+					<button class="btn btn-icon btn-rounded btn-flush-dark flush-soft-hover navbar-toggle d-xl-none">
+                        <span class="icon">
+                            <span class="feather-icon">
+                                <i data-feather="align-left"></i>
+                            </span>
+                        </span>
+                    </button>
+					<!-- Navbar Nav -->
+					<div class="hk-menu">
+						<!-- Brand -->
+						<div class="menu-header d-xl-none">
+							<span>
+								<a class="navbar-brand" href="/">
+									<img class="brand-img img-fluid" src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/brand-sm.svg" alt="brand" />
+									<img class="brand-img img-fluid" src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/Jampack.svg" alt="brand" />
+								</a>
+								<button class="btn btn-icon btn-rounded btn-flush-dark flush-soft-hover navbar-toggle">
+									<span class="icon">
+										<span class="svg-icon fs-5">
+											<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-bar-to-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+												<line x1="10" y1="12" x2="20" y2="12"></line>
+												<line x1="10" y1="12" x2="14" y2="16"></line>
+												<line x1="10" y1="12" x2="14" y2="8"></line>
+												<line x1="4" y1="4" x2="4" y2="20"></line>
+											</svg>
+										</span>
+									</span>
+								</button>
+							</span>
+						</div>
+						<!-- /Brand -->
+					</div>
+					<div id="hk_menu_backdrop" class="hk-menu-backdrop"></div>
+					<!-- /Navbar Nav -->
+				</div>
+				<!-- /Start Nav -->
+				<!-- End Nav -->
+				<div class="nav-end-wrap">
+					<ul class="navbar-nav flex-row">
+						<li class="nav-item">
+							<a href="#dialer" class="btn btn-icon btn-rounded btn-flush-dark flush-soft-hover">
+                                <span class="icon">
+                                    <span class="position-relative">
+                                        <span class="material-icons" style="margin-top: 11px!important; ">dialpad</span>
+                                    </span>
+                                </span>
+                            </a>
+						</li>
+						<li class="nav-item">
+							<div class="dropdown dropdown-notifications">
+								<a href="#" class="btn btn-icon btn-rounded btn-flush-dark flush-soft-hover dropdown-toggle no-caret" data-bs-toggle="dropdown" data-dropdown-animation role="button" aria-haspopup="true" aria-expanded="false">
+                                    <span class="icon">
+                                        <span class="position-relative">
+                                            <span class="feather-icon">
+                                                <i data-feather="bell"></i>
+                                            </span>
+											<span class="badge badge-success badge-indicator position-top-end-overflow-1"></span>
+                                        </span>
+                                    </span>
+                                </a>
+								<div class="dropdown-menu dropdown-menu-end p-0">
+									<h6 class="dropdown-header px-4 fs-6">
+                                        Notifications
+                                        <a href="#" class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover">
+                                            <span class="icon">
+                                                <span class="feather-icon">
+                                                    <i data-feather="settings"></i>
+                                                </span>
+                                            </span>
+                                        </a>
+									</h6>
+									<div data-simplebar class="dropdown-body  p-2">
+										<a href="javascript:void(0);" class="dropdown-item">
+											<div class="media">
+												<div class="media-head">
+													<div class="avatar avatar-rounded avatar-sm">
+														<img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/avatar2.jpg" alt="user" class="avatar-img">
+													</div>
+												</div>
+												<div class="media-body">
+													<div>
+														<div class="notifications-text">Morgan Freeman accepted your invitation to join the team</div>
+														<div class="notifications-info">
+															<span class="badge badge-soft-success">Collaboration</span>
+															<div class="notifications-time">Today, 10:14 PM</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<div class="media">
+												<div class="media-head">
+													<div class="avatar  avatar-icon avatar-sm avatar-success avatar-rounded">
+														<span class="initial-wrap">
+															<span class="feather-icon"><i data-feather="inbox"></i></span>
+														</span>
+													</div>
+												</div>
+												<div class="media-body">
+													<div>
+														<div class="notifications-text">New message received from Alan Rickman</div>
+														<div class="notifications-info">
+															<div class="notifications-time">Today, 7:51 AM</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<div class="media">
+												<div class="media-head">
+													<div class="avatar  avatar-icon avatar-sm avatar-pink avatar-rounded">
+														<span class="initial-wrap">
+															<span class="feather-icon"><i data-feather="clock"></i></span>
+														</span>
+													</div>
+												</div>
+												<div class="media-body">
+													<div>
+														<div class="notifications-text">You have a follow up with Jampack Head on Friday, Dec 19 at 9:30 am</div>
+														<div class="notifications-info">
+															<div class="notifications-time">Yesterday, 9:25 PM</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<div class="media">
+												<div class="media-head">
+													<div class="avatar avatar-sm avatar-rounded">
+														<img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/avatar3.jpg" alt="user" class="avatar-img">
+													</div>
+												</div>
+												<div class="media-body">
+													<div>
+														<div class="notifications-text">Application of Sarah Williams is waiting for your approval</div>
+														<div class="notifications-info">
+															<div class="notifications-time">Today 10:14 PM</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<div class="media">
+												<div class="media-head">
+													<div class="avatar avatar-sm avatar-rounded">
+														<img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/avatar10.jpg" alt="user" class="avatar-img">
+													</div>
+												</div>
+												<div class="media-body">
+													<div>	
+														<div class="notifications-text">Winston Churchil shared a document with you</div>
+														<div class="notifications-info">
+															<span class="badge badge-soft-violet">File Manager</span>
+															<div class="notifications-time">2 Oct, 2021</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<div class="media">
+												<div class="media-head">
+													<div class="avatar  avatar-icon avatar-sm avatar-danger avatar-rounded">
+														<span class="initial-wrap">
+															<span class="feather-icon"><i data-feather="calendar"></i></span>
+														</span>
+													</div>
+												</div>
+												<div class="media-body">
+													<div>	
+														<div class="notifications-text">Last 2 days left for the project to be completed</div>
+														<div class="notifications-info">
+															<span class="badge badge-soft-orange">Updates</span>
+															<div class="notifications-time">14 Sep, 2021</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="dropdown-footer"><a href="#"><u>View all notifications</u></a></div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- /End Nav -->
+			</div>									
+		</nav>
+		<!-- /Top Navbar -->

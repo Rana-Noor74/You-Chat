@@ -1,0 +1,17 @@
+    <!-- jQuery -->
+    <script src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/vendors/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JS -->
+   	<script src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- FeatherIcons JS -->
+    <script src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/js/feather.min.js"></script>
+
+    <!-- Fancy Dropdown JS -->
+    <script src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/js/dropdown-bootstrap-extended.js"></script>
+
+	<!-- Simplebar JS -->
+	<script src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/vendors/simplebar/dist/simplebar.min.js"></script>
+		
+	<!-- Init JS -->
+	<script src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/js/init.js"></script>
