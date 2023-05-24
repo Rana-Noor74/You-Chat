@@ -101,6 +101,8 @@ $(document).on("click", "#updateCompany-btn", function(){
                                                     text: "Company Updated successfully",
                                                     icon: "success",
                                                     confirmButtonColor: "#5156be",
+                                                }).then(function(e) {
+                                                    location.reload();
                                                 });
                                             }else{
                                                 Swal.fire({
