@@ -8,6 +8,5 @@ adminAjaxRoutes.route("/create-company").post(adminAjaxController.createCompany)
 adminAjaxRoutes.route("/update-company").post(adminAjaxController.updateCompany);
 adminAjaxRoutes.route("/getAll-companies/").get(adminAjaxController.getAllCompanies);
 
-
 module.exports = adminAjaxRoutes;
 

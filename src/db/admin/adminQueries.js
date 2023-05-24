@@ -1,5 +1,7 @@
 //requiring models
 const company = require("../../models/company");
+const number = require("../../models/number");
+const numberService = require("../../models/numberService");
 
 module.exports = {
     createCompanyQuery : async (req, res)=>{
@@ -45,13 +47,12 @@ module.exports = {
             callService : companyCallService,
             smsService : companySMSService,
             updated_At : new Date(),
-        }).then(async (doc)=>{
-            console.log(doc);
-            if (doc.acknowleged) {
-                await res.status(200).send({"success" : 1, "message" : "Company is up-to-date"});
-            } else{
-                await res.status(200).send({"success" : 0, "message" : "Fail to update the company"});
-            };
+        }, {new: true}).then(async (docs)=>{
+            //{new : true} always return the updated document.
+            // console.log(docs);  
+            await res.status(200).send({"success" : 1, "message" : "Company is up-to-date"});
+        }).catch((error)=>{
+            res.status(200).send({"success" : 0, "message" : "Fail to update the company"});
         });
     },
     searchNumberApi : async (req, res)=>{
@@ -72,16 +73,41 @@ module.exports = {
     },
     buyNumberApi : async (req, res)=>{
         const numbersArray = req.body.numbersArray;
-        for(let i=0; i < numbersArray.length; i++){
-            let number = numbersArray[i].number;
-            let countryCode = numbersArray[i].countryCode;
-            console.log({ "number": number, "countryCode": countryCode, "billingIntervalMonths": 1 });
-            if(i == ((numbersArray.length)-1)){
-                setTimeout(()=>{
-                    res.status(200).send({"success" : 1, "message" : "Numbers Are Buyed SuccessFully"});
-                }, 5000);
-            };
-        };
+        // for(let i=0; i < numbersArray.length; i++){
+        //     let number = numbersArray[i].number;
+        //     let countryCode = numbersArray[i].countryCode;
+        //     console.log({ "number": number, "countryCode": countryCode, "billingIntervalMonths": 1 });
+        //     if(i == ((numbersArray.length)-1)){
+        //         setTimeout(()=>{
+        //             res.status(200).send({"success" : 1, "message" : "Numbers Are Buyed SuccessFully"});
+        //         }, 5000);
+        //     };
+        // };
+        // let numberObject = {
+        //     number : "+17865780409",
+        //     country : "US",
+        //     access : "US",
+        //     created_At : new Date(),
+        //     companyDocId : "",
+        //     loginDocId : "",
+        // };
+        // await number.collection.insertOne(numberObject).then((docs)=>{
+        //     console.log(docs);
+        //     let numberDocId = docs.insertedId._id
+        //     console.log(numberDocId);
+        //     numberService.collection.insertOne({
+        //         numberDocId : numberDocId,
+        //         callService : true,
+        //         smsService : true,
+        //         mmsService : true
+        //     }).then((abc)=>{
+        //         console.log(abc);
+        //     });
+        // });
+        // var abc = "646e9e329bbe16a4b8ae4496"
+        // var xyz = await numberService.findById(abc).exec();
+        // console.log(xyz.numberDocId);
+        // console.log(xyz._id);
     },
     getAllCompanies : async (req, res)=>{
         try {
@@ -92,4 +118,4 @@ module.exports = {
             res.send({"success" : 0, "message" : error.messsage});
         };
     },
-}
+};
