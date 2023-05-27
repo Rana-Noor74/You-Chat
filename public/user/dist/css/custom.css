@@ -1,21 +1,68 @@
 body{
     font-size: smaller!important;
 }
-.avatar-sm .fa-user-circle{
-    font-size: 60px!important;
-    color: grey!important;
+.border-rounded{
+    border-radius: 50%!important;
 }
-.avatar-xs .fa-user-circle{
-    font-size: 40px!important;
-    color: grey!important;
-}
-.avatar-xxl .fa-user-circle{
-    font-size: 150px!important;
-    color: grey!important;
-}
-.avatar-xxxl .fa-user-circle{
-    font-size: 200px!important;
-    color: grey!important;
-    margin-left: 10px!important;
 
+/* dialer css */
+:focus{outline: none;}
+        
+.dialer-input-parent{
+    float: left; 
+    width: 100%; 
+    margin: 30px auto; 
+    position: relative;
+} 
+input[type="text"]{
+    font: 15px/24px "Lato", Arial, sans-serif;
+    color: #333;
+    width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    border-radius: 5px;
 }
+.effect-1{
+    border: 0; 
+    padding: 7px 0; 
+    border-bottom: 1px solid #ccc;
+    text-align:center;
+}
+
+.effect-1 ~ .focus-border{
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    width: 0; 
+    height: 2px; 
+    background-color: darkcyan; 
+    transition: 0.4s;
+}
+.effect-1:focus ~ .focus-border{
+    width: 100%; 
+    transition: 0.4s;
+}
+.he-wi{
+    width: 3.5rem!important;
+    height: 3.5rem!important;
+}
+.initial-wrap:hover {
+    cursor: pointer;
+}
+.bg-lightgray{
+    background-color: lightgrey;
+}
+.select-text-disable{
+    user-select: none;
+}
+
+.dialer-box{
+    float:right;
+    overflow: scroll;
+    border-left: 1px solid lightgrey!important;
+}
+.dialer-box-inner{
+    width: 350px;
+    padding: 10px;
+}
+/* dialer css end */

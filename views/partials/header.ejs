@@ -4,53 +4,40 @@
 				<!-- Start Nav -->
 				<div class="nav-start-wrap flex-fill">
 					<!-- Brand -->
-					<a class="navbar-brand d-xl-flex d-none flex-shrink-0" href="/">
+					<a class="navbar-brand d-md-flex d-lg-flex d-xl-flex d-sm-none d-none flex-shrink-0" href="/">
 						<img class="brand-img img-fluid" src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/brand-sm.svg" alt="brand" />
 						<img class="brand-img img-fluid" src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/Jampack.svg" alt="brand" />
 					</a>
 					<!-- /Brand -->
-					<button class="btn btn-icon btn-rounded btn-flush-dark flush-soft-hover navbar-toggle d-xl-none">
-                        <span class="icon">
-                            <span class="feather-icon">
-                                <i data-feather="align-left"></i>
-                            </span>
-                        </span>
-                    </button>
-					<!-- Navbar Nav -->
-					<div class="hk-menu">
-						<!-- Brand -->
-						<div class="menu-header d-xl-none">
-							<span>
-								<a class="navbar-brand" href="/">
-									<img class="brand-img img-fluid" src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/brand-sm.svg" alt="brand" />
-									<img class="brand-img img-fluid" src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/Jampack.svg" alt="brand" />
-								</a>
-								<button class="btn btn-icon btn-rounded btn-flush-dark flush-soft-hover navbar-toggle">
-									<span class="icon">
-										<span class="svg-icon fs-5">
-											<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-bar-to-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-												<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-												<line x1="10" y1="12" x2="20" y2="12"></line>
-												<line x1="10" y1="12" x2="14" y2="16"></line>
-												<line x1="10" y1="12" x2="14" y2="8"></line>
-												<line x1="4" y1="4" x2="4" y2="20"></line>
-											</svg>
-										</span>
-									</span>
-								</button>
-							</span>
-						</div>
-						<!-- /Brand -->
+					<div class="d-xl-none d-md-none d-lg-none d-xxl-none">
+						<img class="brand-img img-fluid" src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/brand-sm.svg" alt="brand" />
+						<span style="font-size: 400!important;"> Jampack </span>
 					</div>
-					<div id="hk_menu_backdrop" class="hk-menu-backdrop"></div>
-					<!-- /Navbar Nav -->
 				</div>
 				<!-- /Start Nav -->
 				<!-- End Nav -->
 				<div class="nav-end-wrap">
 					<ul class="navbar-nav flex-row">
 						<li class="nav-item">
-							<a href="#dialer" class="btn btn-icon btn-rounded btn-flush-dark flush-soft-hover">
+							<a href="/login" class="btn btn-icon btn-rounded btn-flush-dark flush-soft-hover">
+                                <span class="icon">
+                                    <span class="position-relative" style="margin-top: 5px!important;">
+                                        <i class="fa fa-power-off text-danger"></i>
+                                    </span>
+                                </span>
+                            </a>
+						</li>
+						<li class="nav-item">
+							<a href="/lock-screen" class="btn btn-icon btn-rounded btn-flush-dark flush-soft-hover">
+                                <span class="icon">
+                                    <span class="position-relative" style="margin-top: 5px!important;">
+                                        <i class="fa fa-lock text-primary"></i>
+                                    </span>
+                                </span>
+                            </a>
+						</li>
+						<li class="nav-item">
+							<a id="dialPad" class="btn btn-icon btn-flush-dark btn-rounded slide-dialer-toggle flush-soft-hover" href="#">
                                 <span class="icon">
                                     <span class="position-relative">
                                         <span class="material-icons" style="margin-top: 11px!important; ">dialpad</span>

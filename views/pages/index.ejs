@@ -9,7 +9,10 @@
 		<div class="hk-pg-wrapper pb-0">
 			<!-- Page Body -->
 			<div class="hk-pg-body py-0">
-				<div class="chatapp-wrap chatapp-info-active">
+				<!-- dialer -->
+				<%- include("../partials/dialer"); %>
+				<!-- dialer end -->
+				<div class="chatapp-wrap">
 					<div class="chatapp-content">
 						<div class="chatapp-aside">
                             <%- include("../partials/contacts"); %>
@@ -27,5 +30,627 @@
 	</div>
     <!-- /Wrapper -->
     <%- include("../partials/foot"); %>
+	<script>
+		
+        $(".dialer-digit").on("click", function(){
+            $(this).parent().removeClass("avatar-soft-primary");
+            $(this).parent().addClass("bg-lightgray");
+            var digit = $(this).data('key');
+            var inputedNumber =  $("#dialer-input").val();
+            var outputNumber = inputedNumber+digit ;
+			console.log(outputNumber);
+
+			if(outputNumber.slice(0,2) == "+1"){
+				// var abc = outputNumber.substring(0, 2) + " " + outputNumber.substring(3, 6);
+				var abc = outputNumber
+				
+				if(outputNumber.length == 3){
+					var abc = outputNumber.substring(0, 2) + " " + "(" + outputNumber.substring(3, 6);
+					console.log(abc)
+				}
+				
+				console.log("This is abc =>", abc);
+				$("#dialer-input").val(abc);
+				setTimeout(()=>{
+					$(this).parent().addClass("avatar-soft-primary");
+					$(this).parent().removeClass("bg-lightgray");
+				}, 100);
+			}else{
+				$("#dialer-input").val(outputNumber);
+				setTimeout(()=>{
+					$(this).parent().addClass("avatar-soft-primary");
+					$(this).parent().removeClass("bg-lightgray");
+				}, 100); 
+			};
+           
+        });
+
+        $("#dialer-backBtn").on("click", function(){
+            $(this).parent().removeClass("avatar-soft-primary");
+            $(this).parent().addClass("bg-lightgray");
+            var stringInput = $("#dialer-input").val();
+            stringInput = stringInput.substring(0, stringInput.length-1);
+            $("#dialer-input").val(stringInput);
+            setTimeout(()=>{
+                $(this).parent().addClass("avatar-soft-primary");
+                $(this).parent().removeClass("bg-lightgray");
+            }, 100);
+        });
+
+		$("#dialPad").click(function(){
+			let dialerShowClassTest = $(".dialer-box").hasClass("dialer-active");
+			dialerShowClassTest ? "" : $(".dialer-box").addClass("dialer-active");
+			let chatInfoClassTest = $(".chatapp-wrap").hasClass("chatapp-info-active");
+			chatInfoClassTest ? $(".chatapp-wrap").removeClass("chatapp-info-active") : "";
+			$(".dialer-box").animate({
+				width: "toggle"
+			});
+		});
+		$(document).ready(()=>{
+			$(".dialer-box").hide();
+			$(".chatapp-wrap").removeClass("chatapp-info-active");
+		});
+
+		$(document).on("click", "#chatInfoBtn", ()=>{
+			let dialerShowClassTest = $(".dialer-box").hasClass("dialer-active");
+			if(dialerShowClassTest){
+				$(".dialer-box").animate({
+					width: "toggle"
+				});
+			}else{
+
+			}
+			$(".chat-info").html("");
+			$(".chat-info").html(`
+				<div data-simplebar class="nicescroll-bar">
+					<button type="button" class="info-close btn-close">
+						<span aria-hidden="true">×</span>
+					</button>
+					<div class="text-center">
+						<div class="avatar avatar-soft-danger avatar-rounded border border-1 border-danger border-rounded avatar-xxl">
+							<span class="initial-wrap">W</span>
+						</div>
+						<div class="cp-name text-truncate mt-2">Winston Churchil</div>
+						<p class="text-truncate">No Pain No Gain</p>
+					</div>
+					<ul class="nav nav-justified nav-light nav-tabs nav-segmented-tabs active-theme mt-4">
+						<li class="nav-item">
+							<a class="nav-link active" data-bs-toggle="tab" href="#tab_info">
+								<span class="nav-link-text">Info</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-bs-toggle="tab" href="#tab_files">
+								<span class="nav-link-text">Files</span>
+							</a>
+						</li>
+					</ul>
+					<div class="tab-content mt-4">
+						<div class="tab-pane fade show active" id="tab_info">
+							<div class="collapse-simple mt-3">
+								<div class="card">
+									<div class="card-header">
+										<a role="button" data-bs-toggle="collapse" href="#gn_info" aria-expanded="true">General Info</a>
+									</div>
+									<div id="gn_info" class="collapse show">
+										<div class="card-body">
+											<ul class="cp-info">
+												<li>
+													<a href="javascript:void(0);">
+														<span class="cp-icon-wrap">
+														<i class="fa fa-user"></i>
+														</span>
+														<span class="custName" data-state="span">Steve Rogers</span>
+													</a>
+												</li>
+												<li>
+													<a href="javascript:void(0);">
+														<span class="cp-icon-wrap"><i class="fa fa-envelope"></i></span>
+														<span class="text-primary">contact@hencework.com</span>
+													</a>
+												</li>
+												<li>
+													<a href="javascript:void(0);">
+														<span class="cp-icon-wrap"><i class="fa fa-phone"></i></span>
+														+91-25-4125-2365
+													</a>
+												</li>
+												<li>
+													<a href="javascript:void(0);">
+														<span class="cp-icon-wrap"><i class="fa fa-book"></i></span>
+														Oslo, Canada
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="tab_files">
+							<div class="collapse-simple mt-3">
+								<div class="card">
+									<div class="card-header">
+										<a role="button" data-bs-toggle="collapse" href="#files_collapse" aria-expanded="true">
+											Shared Files
+										</a>
+									</div>
+									<div id="files_collapse" class="collapse show">
+										<div class="card-body">
+											<ul class="cp-files d-flex flex-row flex-wrap" >
+												<li>
+													<div class="media">
+														<img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/dummy.png" height="60px" width="60px" alt="">
+													</div>
+												</li>
+												<li>
+													<div class="media">
+														<img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/dummy2.png" height="60px" width="60px" alt="">
+													</div>
+												</li>
+												<li>
+													<div class="media">
+														<img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/dummy3.jpg" height="60px" width="60px" alt="">
+													</div>
+												</li>
+												<li>
+													<div class="media">
+														<img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/dummy4.png" height="60px" width="60px" alt="">
+													</div>
+												</li>
+												<li>
+													<div class="media">
+														<img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/dummy.png" height="60px" width="60px" alt="">
+													</div>
+												</li>
+												<li>
+													<div class="media">
+														<img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/dummy2.png" height="60px" width="60px" alt="">
+													</div>
+												</li>
+												<li>
+													<div class="media">
+														<img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/dummy3.jpg" height="60px" width="60px" alt="">
+													</div>
+												</li>
+												<li>
+													<div class="media">
+														<img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/dummy4.png" height="60px" width="60px" alt="">
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			`);
+		});
+		
+		
+		$(document).on("click", "#startNewChat", ()=>{
+			console.log("This is testing");
+			$("#chatHead").html("");
+			$("#chatName").html("");
+			$("#dummy_avatar").html("");
+			$(".chat-info").html("");
+			$("#chatHead").html(`
+				<div class="avatar avatar-sm avatar-primary avatar-rounded border border-1 border-primary border-rounded">
+					<span class="initial-wrap"><i class="fa fa-user"></i></span>
+				</div>
+			`);
+			$("#chatName").html(`
+			<div class="user-name">
+				<input type="text" id="input_msg_send_chatapp" name="send-msg" class="input-msg-send form-control" placeholder="Enter Phone" >
+				</div>`);
+			$("#dummy_avatar").html(`
+				<div class="simplebar-mask">
+					<div class="simplebar-offset" style="right: 0px; bottom: 0px;">
+						<div class="simplebar-content-wrapper" style="height: 100%; overflow: hidden scroll;">
+							<div class="simplebar-content" style="padding: 0px;">
+								<ul id="dummy_avatar" class="list-unstyled chat-single-list"></ul>
+								<div class="start-conversation">
+									<img class="d-block img-fluid" src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/start-conversation.png" alt="empty-chat">
+									<button class="btn btn-soft-primary btn-lg mt-3">Start Conversation</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			`);
+			$(".chat-info").html(`
+				<div data-simplebar class="nicescroll-bar">
+					<button type="button" class="info-close btn-close">
+						<span aria-hidden="true">×</span>
+					</button>
+					<div class="text-center">
+						<div class="avatar avatar-primary avatar-rounded border border-1 border-primary border-rounded avatar-xxl">
+							<span class="initial-wrap"><i class="fa fa-user"></i></span>
+						</div>
+						<div class="cp-name text-truncate mt-2" id="chatInfoName"></div>
+						<p class="text-truncate">No Pain No Gain</p>
+					</div>
+					<ul class="nav nav-justified nav-light nav-tabs nav-segmented-tabs active-theme mt-4">
+						<li class="nav-item">
+							<a class="nav-link active" data-bs-toggle="tab" href="#tab_info">
+								<span class="nav-link-text">Info</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-bs-toggle="tab" href="#tab_files">
+								<span class="nav-link-text">Files</span>
+							</a>
+						</li>
+					</ul>
+					<div class="tab-content mt-4">
+						<div class="tab-pane fade show active" id="tab_info">
+							<div class="collapse-simple mt-3">
+								<div class="card">
+									<div class="card-header">
+										<a role="button" data-bs-toggle="collapse" href="#gn_info" aria-expanded="true">General Info</a>
+									</div>
+									<div id="gn_info" class="collapse show">
+										<div class="card-body">
+											<ul class="cp-info">
+												<li>
+													<a href="javascript:void(0);">
+														<span class="cp-icon-wrap">
+														<i class="fa fa-user"></i>
+														</span>
+														<span class="custName" data-state="span"></span>
+													</a>
+												</li>
+												<li>
+													<a href="javascript:void(0);">
+														<span class="cp-icon-wrap"><i class="fa fa-envelope"></i></span>
+														<span class="text-primary"></span>
+													</a>
+												</li>
+												<li>
+													<a href="javascript:void(0);">
+														<span class="cp-icon-wrap"><i class="fa fa-phone"></i></span>
+														
+													</a>
+												</li>
+												<li>
+													<a href="javascript:void(0);">
+														<span class="cp-icon-wrap"><i class="fa fa-book"></i></span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="tab_files">
+							<div class="collapse-simple mt-3">
+								<div class="card">
+									<div class="card-header">
+										<a role="button" data-bs-toggle="collapse" href="#files_collapse" aria-expanded="true">
+											Shared Files
+										</a>
+									</div>
+									<div id="files_collapse" class="collapse show">
+										<div class="card-body">
+											<ul class="cp-files d-flex flex-row flex-wrap" >
+												<li>
+													<div class="media">
+													</div>
+												</li>
+												<li>
+													<div class="media">
+													</div>
+												</li>
+												<li>
+													<div class="media">
+													</div>
+												</li>
+												<li>
+													<div class="media">
+													</div>
+												</li>
+												<li>
+													<div class="media">
+													</div>
+												</li>
+												<li>
+													<div class="media">
+													</div>
+												</li>
+												<li>
+													<div class="media">
+													</div>
+												</li>
+												<li>
+													<div class="media">
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			`);
+		});
+
+		$(document).on("click", ".read-chat", ()=>{
+			$("#dummy_avatar").html("");
+			$(".chat-info").html("");
+			$("#dummy_avatar").html(`
+					<li class="media received">
+						<div class="avatar avatar-soft-danger avatar-rounded border border-1 border-danger border-rounded avatar-xs">
+							<span class="initial-wrap">W</span>
+						</div>
+						<div class="media-body">
+							<div class="msg-box">
+								<div>
+									<p>Cool, lets talk about it tomorrow</p>
+									<span class="chat-time">10:52 PM</span>
+								</div>
+								
+							</div>
+							<div class="msg-box">
+								<div>
+									<p>Images for new marketing pages have been sent</p>
+									<span class="chat-time">10:53 PM</span>
+								</div>
+								
+							</div> 
+						</div>
+					</li>
+					<li class="media media-attachment received">
+						<div class="avatar avatar-soft-danger avatar-rounded border border-1 border-danger border-rounded avatar-xs">
+							<span class="initial-wrap">W</span>
+						</div>
+						<div class="media-body msg-docs">
+							<div class="msg-box">
+								<div>
+									<div class="media">
+										<div class="avatar avatar-icon avatar-sm avatar-blue">
+											<span class="initial-wrap fs-3">
+												<img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/dummy.png" height="50px" width="60px" alt="">
+											</span>
+										</div>
+										<div class="media-body">
+											<p class="file-name">Website_content.xls</p>
+											<p class="file-size">2,635 KB</p>
+										</div>
+									</div>
+									<div class="file-overlay">
+										<button class="btn btn-sm btn-icon btn-rounded btn-primary">
+											<span class="icon">
+												<i class="fa fa-arrow-down"></i>
+											</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="msg-box">
+								<div>
+									<div class="media">
+										<div class="avatar avatar-icon avatar-sm avatar-warning">
+											<span class="initial-wrap fs-3">
+												<img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/dummy.png" height="50px" width="60px" alt="">
+											</span>
+										</div>
+										<div class="media-body">
+											<p class="file-name">themeforest-pack.zip</p>
+											<p class="file-size">2.45 GB</p>
+										</div>
+									</div>
+									<div class="file-overlay">
+										<button class="btn btn-sm btn-icon btn-rounded btn-primary">
+											<span class="icon">
+												<i class="fa fa-arrow-down"></i>
+											</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="day-sep">
+						<span>Today</span>
+					</li>
+					<li class="media sent">
+						<div class="media-body">
+							<div class="msg-box">
+								<div>
+									<p>Anyways, I am working on something that you would like to know. This project is based on angular js and you are the keeda in it. I need you help in it.</p>
+									<span class="chat-time">11:52 PM</span>
+								</div>
+								
+							</div>
+						</div>
+					</li>
+					<li class="media media-attachment received">
+						<div class="avatar avatar-soft-danger avatar-rounded border border-1 border-danger border-rounded avatar-xs">
+							<span class="initial-wrap">W</span>
+						</div>
+						<div class="media-body msg-imgs">
+							<div class="msg-box">
+								<div>
+									<img class="d-block img-fluid" src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/dummy.png" alt="#">
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="media sent">
+						<div class="media-body">
+							<div class="msg-box">
+								<div>
+									<p>Haha, this joke is hilarious. Is it what your heart feel about the salary? 😍</p>
+									<span class="chat-time">10:52 PM</span>
+								</div>
+								
+							</div>
+						</div>
+					</li>
+					<li class="media received">
+						<div class="avatar avatar-soft-danger avatar-rounded border border-1 border-danger border-rounded avatar-xs">
+							<span class="initial-wrap">W</span>
+						</div>
+						<div class="media-body">
+							<div class="msg-box">
+								<div>
+									<p>Hey Ben, just a reminder that you are coming for the meeting today in the conference. We are proposing a change in the client briefing.</p>
+									<span class="chat-time">9:20 AM</span>
+								</div>
+								
+							</div>
+						</div>
+					</li>
+			`);
+			$(".chat-info").html(`
+				<div data-simplebar class="nicescroll-bar">
+					<button type="button" class="info-close btn-close">
+						<span aria-hidden="true">×</span>
+					</button>
+					<div class="text-center">
+						<div class="avatar avatar-soft-danger avatar-rounded border border-1 border-danger border-rounded avatar-xxl">
+							<span class="initial-wrap">W</span>
+						</div>
+						<div class="cp-name text-truncate mt-2">Winston Churchil</div>
+						<p class="text-truncate">No Pain No Gain</p>
+					</div>
+					<ul class="nav nav-justified nav-light nav-tabs nav-segmented-tabs active-theme mt-4">
+						<li class="nav-item">
+							<a class="nav-link active" data-bs-toggle="tab" href="#tab_info">
+								<span class="nav-link-text">Info</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-bs-toggle="tab" href="#tab_files">
+								<span class="nav-link-text">Files</span>
+							</a>
+						</li>
+					</ul>
+					<div class="tab-content mt-4">
+						<div class="tab-pane fade show active" id="tab_info">
+							<div class="collapse-simple mt-3">
+								<div class="card">
+									<div class="card-header">
+										<a role="button" data-bs-toggle="collapse" href="#gn_info" aria-expanded="true">General Info</a>
+									</div>
+									<div id="gn_info" class="collapse show">
+										<div class="card-body">
+											<ul class="cp-info">
+												<li>
+													<a href="javascript:void(0);">
+														<span class="cp-icon-wrap">
+														<i class="fa fa-user"></i>
+														</span>
+														<span class="custName" data-state="span">Steve Rogers</span>
+													</a>
+												</li>
+												<li>
+													<a href="javascript:void(0);">
+														<span class="cp-icon-wrap"><i class="fa fa-envelope"></i></span>
+														<span class="text-primary">contact@hencework.com</span>
+													</a>
+												</li>
+												<li>
+													<a href="javascript:void(0);">
+														<span class="cp-icon-wrap"><i class="fa fa-phone"></i></span>
+														+91-25-4125-2365
+													</a>
+												</li>
+												<li>
+													<a href="javascript:void(0);">
+														<span class="cp-icon-wrap"><i class="fa fa-book"></i></span>
+														Oslo, Canada
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="tab_files">
+							<div class="collapse-simple mt-3">
+								<div class="card">
+									<div class="card-header">
+										<a role="button" data-bs-toggle="collapse" href="#files_collapse" aria-expanded="true">
+											Shared Files
+										</a>
+									</div>
+									<div id="files_collapse" class="collapse show">
+										<div class="card-body">
+											<ul class="cp-files d-flex flex-row flex-wrap" >
+												<li>
+													<div class="media">
+														<img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/dummy.png" height="60px" width="60px" alt="">
+													</div>
+												</li>
+												<li>
+													<div class="media">
+														<img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/dummy2.png" height="60px" width="60px" alt="">
+													</div>
+												</li>
+												<li>
+													<div class="media">
+														<img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/dummy3.jpg" height="60px" width="60px" alt="">
+													</div>
+												</li>
+												<li>
+													<div class="media">
+														<img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/dummy4.png" height="60px" width="60px" alt="">
+													</div>
+												</li>
+												<li>
+													<div class="media">
+														<img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/dummy.png" height="60px" width="60px" alt="">
+													</div>
+												</li>
+												<li>
+													<div class="media">
+														<img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/dummy2.png" height="60px" width="60px" alt="">
+													</div>
+												</li>
+												<li>
+													<div class="media">
+														<img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/dummy3.jpg" height="60px" width="60px" alt="">
+													</div>
+												</li>
+												<li>
+													<div class="media">
+														<img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/dummy4.png" height="60px" width="60px" alt="">
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			`);
+		});
+		// $(document).on("click", ".custName", function(){
+		// 	var innerText = $(this).text();
+		// 	var state = $(this).attr("data-state");
+		// 	if(state == "span"){
+		// 		$(this).attr("data-state", "input");
+		// 		$(this).html(`<input type="text" id="editCustName" value="${innerText}" >`);
+		// 		$("#editCustName").focusout(function(){
+		// 			$(".custName").attr("data-state", "span");
+		// 			var updatedCustName = $(this).val();
+		// 			console.log(updatedCustName);
+		// 			$(".custName").html(updatedCustName);
+		// 		});
+		// 	}else{
+
+		// 	};
+		// });
+
+	</script>
 </body>
 </html>

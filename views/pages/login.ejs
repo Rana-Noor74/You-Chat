@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head"); %>
+</head>
+<body>
+   	<!-- Wrapper -->
+	<div class="hk-wrapper hk-pg-auth" data-footer="simple">
+		<!-- Main Content -->
+		<div class="hk-pg-wrapper">
+			<!-- Page Body -->
+			<div class="hk-pg-body">
+				<!-- Container -->
+				<div class="container-xxl">
+					<!-- Row -->
+					<div class="row">
+						<div class="col-xl-7 col-lg-6 d-lg-block d-none v-separator separator-sm">
+							<div class="auth-content py-md-0 py-8">
+								<div class="row">
+									<div class="col-xxl-9 col-xl-8 col-lg-11 text-center mx-auto">
+										<img src="<%= (process.env.SERVER_TYPE == 'STAGING') ? process.env.LOCAL_URL : process.env.LIVE_URL %>/user/dist/img/macaroni-logged-out.png"  class="img-fluid w-sm-40 w-50 mb-3" alt="login"/>
+										<h3 class="mb-2">Welcom To Domain.com</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-5 col-lg-6 col-md-7 col-sm-10 position-relative mx-auto">
+							<div class="auth-content py-md-0 py-8">
+								<form class="w-100">
+									<div class="row">
+										<div class="col-lg-10 mx-auto">
+											<h4 class="mb-4">Sign in to your account</h4>
+											<div class="row gx-3">
+												<div class="form-group col-lg-12">
+													<div class="form-label-group">
+														<label>User Name</label>
+													</div>
+													<input class="form-control" placeholder="Enter username or email ID" value="" type="text">
+												</div>
+												<div class="form-group col-lg-12">
+													<div class="form-label-group">
+														<label>Password</label>
+													</div>
+													<div class="input-group password-check">
+														<span class="input-affix-wrapper">
+															<input class="form-control" placeholder="Enter your password" value="" type="password">
+															<a href="#" class="input-suffix text-muted">
+																<span class="feather-icon"><i class="form-icon" data-feather="eye"></i></span>
+																<span class="feather-icon d-none"><i class="form-icon" data-feather="eye-off"></i></span>
+															</a>
+														</span>
+													</div>
+												</div>
+											</div>
+											<a href="/" class="btn btn-primary btn-uppercase btn-block">Login</a>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<!-- /Row -->
+				</div>
+				<!-- /Container -->
+			</div>
+			<!-- /Page Body -->
+		</div>
+		<!-- /Main Content -->
+	</div>
+    <!-- /Wrapper -->
+    <%- include("../partials/foot"); %>
+</body>
+</html>

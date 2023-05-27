@@ -126,7 +126,7 @@ Project:	Jampack
 /****************************/
 @import url(https://fonts.googleapis.com/icon?family=DM+Sans:400,500,700&display=swap||Material+Icons);
 @import url(../../vendors/bootstrap/dist/css/bootstrap.min.css);
-@import url(font-awesome.min.css);
+/* @import url(font-awesome.min.css); */
 @import url(dripicons.css);
 @import url(cryptofont.min.css);
 @import url(themify-icons.css);
@@ -84511,13 +84511,14 @@ Project:	Jampack
   font-weight: 500;
   color: #262a2e;
   text-transform: capitalize;
+  
 }
 .chatapp-wrap .chatapp-content .chatapp-single-chat header.chat-header .media .media-body .user-status {
   font-size: 0.875rem;
 }
 .chatapp-wrap .chatapp-content .chatapp-single-chat header.chat-header .media .media-body .user-name, .chatapp-wrap .chatapp-content .chatapp-single-chat header.chat-header .media .media-body .user-status {
-  overflow: hidden;
-  text-overflow: ellipsis;
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
   white-space: nowrap;
   max-width: 150px;
 }

@@ -530,9 +530,9 @@ var setHeightWidth = function () {
 var chatAppTarget;
 chatAppTarget = $('.chatapp-wrap')
 var chatApp = function() {
-	if(width>991) 
+	if(width>991)
 		chatAppTarget.removeClass('chatapp-slide');
-	$(document).on("click",".chatapp-wrap .chatapp-content .chatapp-aside .aside-body .chat-contacts-list .media",function (e) {
+	$(document).on("click",".chatapp-wrap .chatapp-content .chatapp-aside .aside-body .chat-contacts-list .media , #startNewChat",function (e) {
 		if(width<=991) {
 			chatAppTarget.addClass('chatapp-slide');
 			$wrapper.attr('data-navbar-style','collapsed');
